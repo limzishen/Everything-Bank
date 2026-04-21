@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "1f9c30f43dde933b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffc91d21c7fe3c9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f4ea3de05515ef7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "23994a6b9554b126",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d2bee6bd3df7c04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d34df1fa5203ab05",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cb67bd1ac63bd1bd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "27631916d78d57d7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cc5be0776fa43cf2",
+    "type": "split",
+    "children": [
+      {
+        "id": "c306eddddc380f62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "129d5ed020de5d70",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2e2734e2b6646065",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "77790cfb42b54e2b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "471e7391b4e7ee7f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f157de1a7e7e4602",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "8f4ea3de05515ef7",
+  "lastOpenFiles": [
+    "DB/Acid.md",
+    "Untitled.base",
+    "Untitled 1.base",
+    "C++ Concurrency in Action copy.pdf",
+    "Scaling and deployment/microservice vs monolith.md",
+    "Scaling and deployment/Server monitoring.md",
+    "Scaling and deployment/Fault tolerance.md",
+    "Scaling and deployment/Docker, Kubernetes.md",
+    "Scaling and deployment/Availability.md",
+    "Scaling and deployment",
+    "Random Thoughts/Project Idea.md",
+    "Random Thoughts/C++ Exchange Engine.md",
+    "Random Thoughts",
+    "Programming Languages/JavaScript.md",
+    "Programming Languages/Python Multiprocessing vs Multithreading.md",
+    "Programming Languages/Overloading function call operator.md",
+    "Programming Languages/Java.md",
+    "Programming Languages/Entity Component System.md",
+    "Programming Languages",
+    "Plans/General Plans.md",
+    "Plans/Detailed Plans.md",
+    "Plans/Concurrency and OS roadmap.md",
+    "Plans/Concurrency Learning plan.md",
+    "Plans",
+    "OS/book.pdf",
+    "OS/Threadpool.md",
+    "OS/Random Scheduling.md",
+    "OS/Process Scheduling.md",
+    "OS/Multi-level Feedback Queue.md",
+    "OS/Memory.md",
+    "OS/Fork.md",
+    "OS/CPU Core vs Threads.md",
+    "OS",
+    "OOP/OOP.md",
+    "OOP",
+    "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
+    "Attachments/telegram-cloud-photo-size-5-6336931170024623042-y.jpg",
+    "Attachments/telegram-cloud-photo-size-5-6309899264338890481-y.jpg",
+    "Attachments/telegram-cloud-photo-size-5-6145438055972670416-y.jpg",
+    "Attachments/Pasted image 20260414235324.png",
+    "Attachments/Pasted image 20260414221830.png",
+    "Attachments/Pasted image 20260413001840.png",
+    "Attachments/Pasted image 20260413000320.png",
+    "Attachments/Pasted image 20260307232904.png",
+    "Attachments/Pasted image 20260307231829.png"
+  ]
+}

@@ -1,0 +1,4 @@
+# Inheritance 
+# abstraction 
+# encapsulation 
+# polymorphism 
