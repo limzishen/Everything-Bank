@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ffc91d21c7fe3c9f",
+        "id": "fbc49a773b88b988",
         "type": "tabs",
         "children": [
           {
-            "id": "8f4ea3de05515ef7",
+            "id": "e4e4a1895b10c0b9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "OS/Process.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Process"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "process",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "OS/Process.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Process"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "OS/Process.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Process"
             }
           },
           {
@@ -150,20 +156,31 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "OS/Process.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Process"
+            }
+          },
+          {
+            "id": "f8de4eb969bd5239",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,23 +190,27 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8f4ea3de05515ef7",
+  "active": "e4e4a1895b10c0b9",
   "lastOpenFiles": [
+    "Scaling and deployment/Server monitoring.md",
+    "OS/Process.md",
+    "C++ Concurrency in Action copy.pdf",
+    "Random Thoughts/C++ Exchange Engine.md",
+    "Random Thoughts/Project Idea.md",
+    "DB/Dependecy Preservation check.md",
+    "Untitled.md",
     "DB/Acid.md",
     "Untitled.base",
     "Untitled 1.base",
-    "C++ Concurrency in Action copy.pdf",
     "Scaling and deployment/microservice vs monolith.md",
-    "Scaling and deployment/Server monitoring.md",
     "Scaling and deployment/Fault tolerance.md",
     "Scaling and deployment/Docker, Kubernetes.md",
     "Scaling and deployment/Availability.md",
     "Scaling and deployment",
-    "Random Thoughts/Project Idea.md",
-    "Random Thoughts/C++ Exchange Engine.md",
     "Random Thoughts",
     "Programming Languages/JavaScript.md",
     "Programming Languages/Python Multiprocessing vs Multithreading.md",
@@ -209,9 +230,7 @@
     "OS/Multi-level Feedback Queue.md",
     "OS/Memory.md",
     "OS/Fork.md",
-    "OS/CPU Core vs Threads.md",
     "OS",
-    "OOP/OOP.md",
     "OOP",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623042-y.jpg",

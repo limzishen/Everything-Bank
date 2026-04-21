@@ -25,6 +25,4 @@ bench mark the differences
 Prereq: learn up the architecture of the agentic ai, how is llm ran on the gpus, 
 Optimisation of local llm performance
 
-# Create a git repository of all the things I have learnt 
-
-# Build a server using an old andriod phone 
+# Build a server using an old android phone 
