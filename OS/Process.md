@@ -7,6 +7,7 @@ Stores the cpu registers, Stack and heap, programme instructions when the proces
 ## Process states 
 Running - the process is running 
 Ready - The program can be run be OS does not allow it to run 
+[[Process Scheduling]]
 Blocked - The process is not ready to be ran 
 
 
