@@ -194,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "82fb9955531ef4f0",
+  "active": "f8de4eb969bd5239",
   "lastOpenFiles": [
+    "README.md",
     "DB/Data Normalisation Forms.md",
     "DB/ERD Cardinality.md",
     "DB/Optimise Query.md",
@@ -229,7 +230,6 @@
     "OS/Process Scheduling.md",
     "Scaling and deployment/Server monitoring.md",
     "C++ Concurrency in Action copy.pdf",
-    "Random Thoughts/C++ Exchange Engine.md",
     "Untitled.base",
     "Untitled 1.base",
     "Scaling and deployment",
