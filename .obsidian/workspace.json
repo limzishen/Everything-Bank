@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8a1a3950881cbfa3",
+        "id": "ff54854f44e78c66",
         "type": "tabs",
         "children": [
           {
-            "id": "8227d081de5b4695",
+            "id": "82fb9955531ef4f0",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "DB/Data Normalisation Forms.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Data Normalisation Forms"
             }
           }
         ]
@@ -113,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "DB/Data Normalisation Forms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Data Normalisation Forms"
             }
           },
           {
@@ -193,15 +194,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8227d081de5b4695",
+  "active": "82fb9955531ef4f0",
   "lastOpenFiles": [
     "DB/Data Normalisation Forms.md",
-    "Functional Dependency.md",
-    "DB/CQRS.md",
-    "DB/Read Heavy vs Write Heavy.md",
     "DB/ERD Cardinality.md",
     "DB/Optimise Query.md",
     "DB/Dependecy Preservation check.md",
+    "DB/Relationship Exception.md",
+    "DB/Relational Model.md",
+    "DB/Read Heavy vs Write Heavy.md",
+    "DB/Acid.md",
+    "DB/CQRS.md",
+    "Functional Dependency.md",
     "DB/DDL.md",
     "OS/Thread.md",
     "Attachments/Pasted image 20260424012639.png",
@@ -226,9 +230,6 @@
     "Scaling and deployment/Server monitoring.md",
     "C++ Concurrency in Action copy.pdf",
     "Random Thoughts/C++ Exchange Engine.md",
-    "Random Thoughts/Project Idea.md",
-    "Untitled.md",
-    "DB/Acid.md",
     "Untitled.base",
     "Untitled 1.base",
     "Scaling and deployment",
