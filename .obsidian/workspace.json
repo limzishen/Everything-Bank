@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fbc49a773b88b988",
+        "id": "8a1a3950881cbfa3",
         "type": "tabs",
         "children": [
           {
-            "id": "e4e4a1895b10c0b9",
+            "id": "8227d081de5b4695",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "OS/Thread.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Thread"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "OS/Multi-level Feedback Queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Multi-level Feedback Queue"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "OS/Thread.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Thread"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "OS/book.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of book"
             }
           },
           {
@@ -180,15 +187,26 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
+      "daily-notes:Open today's daily note": true,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e4e4a1895b10c0b9",
+  "active": "f8de4eb969bd5239",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20260424012639.png",
+    "OS/Multi-level Feedback Queue.md",
+    "OS/Thread.md",
+    "OS/Memory.md",
+    "OS/Fork.md",
+    "OS/CPU Core vs Threads.md",
+    "OS/book.pdf",
+    "Network/Network.md",
+    "CPU Architecture/MESI protocol.md",
+    "CPU Architecture/Datapath and Control Signals.md",
+    "Leetcode Techniques/Dirty Flag.md",
     "OS/Process.md",
     "Attachments/Pasted image 20251211230737.png",
     "Attachments/Pasted image 20251209205705.png",
@@ -197,9 +215,7 @@
     "Attachments/Pasted image 20250919000556.png",
     "Plans/Concurrency Learning plan.md",
     "Plans/Concurrency and OS roadmap.md",
-    "OS/Multi-level Feedback Queue.md",
     "OS/Process Scheduling.md",
-    "OS/book.pdf",
     "Scaling and deployment/Server monitoring.md",
     "C++ Concurrency in Action copy.pdf",
     "Random Thoughts/C++ Exchange Engine.md",
@@ -217,16 +233,8 @@
     "Random Thoughts",
     "Programming Languages/JavaScript.md",
     "Programming Languages/Python Multiprocessing vs Multithreading.md",
-    "Programming Languages/Overloading function call operator.md",
-    "Programming Languages/Java.md",
-    "Programming Languages/Entity Component System.md",
     "Programming Languages",
-    "Plans/General Plans.md",
-    "Plans/Detailed Plans.md",
     "Plans",
-    "OS/Threadpool.md",
-    "OS/Random Scheduling.md",
-    "OS/Memory.md",
     "OS",
     "OOP",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
