@@ -20,6 +20,30 @@
               "icon": "lucide-file",
               "title": "Data Normalisation Forms"
             }
+          },
+          {
+            "id": "478ed5d345fa12c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Random Thoughts/Project Idea.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Project Idea"
+            }
+          },
+          {
+            "id": "01b12b17103ab92a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ]
       }
@@ -53,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#3nf",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,20 +218,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f8de4eb969bd5239",
+  "active": "82fb9955531ef4f0",
   "lastOpenFiles": [
-    "README.md",
+    "Random Thoughts/Project Idea.md",
     "DB/Data Normalisation Forms.md",
+    "DB/Dependecy Preservation check.md",
+    "DB/Minimal Basis.md",
+    "DB/DDL.md",
+    "Leetcode Techniques/SkipList.md",
+    "Leetcode Techniques/Topological sorting.md",
+    "Random Thoughts/C++ Exchange Engine.md",
+    "DB/Functional Dependency.md",
+    "DB/CQRS.md",
     "DB/ERD Cardinality.md",
     "DB/Optimise Query.md",
-    "DB/Dependecy Preservation check.md",
+    "DB/Acid.md",
+    "DB/Asynchronous Query.md",
+    "README.md",
     "DB/Relationship Exception.md",
     "DB/Relational Model.md",
     "DB/Read Heavy vs Write Heavy.md",
-    "DB/Acid.md",
-    "DB/CQRS.md",
-    "Functional Dependency.md",
-    "DB/DDL.md",
     "OS/Thread.md",
     "Attachments/Pasted image 20260424012639.png",
     "OS/Multi-level Feedback Queue.md",
@@ -218,18 +248,12 @@
     "Network/Network.md",
     "CPU Architecture/MESI protocol.md",
     "CPU Architecture/Datapath and Control Signals.md",
-    "Leetcode Techniques/Dirty Flag.md",
-    "OS/Process.md",
     "Attachments/Pasted image 20251211230737.png",
     "Attachments/Pasted image 20251209205705.png",
     "Attachments/Pasted image 20251208002322.png",
     "Attachments/Pasted image 20251207184027.png",
     "Attachments/Pasted image 20250919000556.png",
-    "Plans/Concurrency Learning plan.md",
-    "Plans/Concurrency and OS roadmap.md",
-    "OS/Process Scheduling.md",
-    "Scaling and deployment/Server monitoring.md",
-    "C++ Concurrency in Action copy.pdf",
+    "Concurrency/C++ Concurrency in Action copy.pdf",
     "Untitled.base",
     "Untitled 1.base",
     "Scaling and deployment",

@@ -26,3 +26,15 @@ Prereq: learn up the architecture of the agentic ai, how is llm ran on the gpus,
 Optimisation of local llm performance
 
 # Build a server using an old android phone 
+
+# Build an indexing and vector embedding system 
+[resource](https://pub.towardsai.net/building-real-time-semantic-code-search-with-tree-sitter-and-vector-embeddings-b9b1fc0a94f3)
+
+## Components 
+1. File parser 
+2. dynamic syntax tree builder
+3. vector embedding 
+4. query model 
+# Expect unit testing 
+Idea coma from the Jane street blog 
+
