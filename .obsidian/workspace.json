@@ -11,14 +11,14 @@
             "id": "8227d081de5b4695",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "OS/Thread.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Thread"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "process",
+                "query": "tag:#3nf",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,12 +113,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/Thread.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Thread"
+              "title": "Outgoing links"
             }
           },
           {
@@ -194,11 +193,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f8de4eb969bd5239",
+  "active": "8227d081de5b4695",
   "lastOpenFiles": [
+    "DB/Data Normalisation Forms.md",
+    "Functional Dependency.md",
+    "DB/CQRS.md",
+    "DB/Read Heavy vs Write Heavy.md",
+    "DB/ERD Cardinality.md",
+    "DB/Optimise Query.md",
+    "DB/Dependecy Preservation check.md",
+    "DB/DDL.md",
+    "OS/Thread.md",
     "Attachments/Pasted image 20260424012639.png",
     "OS/Multi-level Feedback Queue.md",
-    "OS/Thread.md",
     "OS/Memory.md",
     "OS/Fork.md",
     "OS/CPU Core vs Threads.md",
@@ -220,19 +227,12 @@
     "C++ Concurrency in Action copy.pdf",
     "Random Thoughts/C++ Exchange Engine.md",
     "Random Thoughts/Project Idea.md",
-    "DB/Dependecy Preservation check.md",
     "Untitled.md",
     "DB/Acid.md",
     "Untitled.base",
     "Untitled 1.base",
-    "Scaling and deployment/microservice vs monolith.md",
-    "Scaling and deployment/Fault tolerance.md",
-    "Scaling and deployment/Docker, Kubernetes.md",
-    "Scaling and deployment/Availability.md",
     "Scaling and deployment",
     "Random Thoughts",
-    "Programming Languages/JavaScript.md",
-    "Programming Languages/Python Multiprocessing vs Multithreading.md",
     "Programming Languages",
     "Plans",
     "OS",
@@ -240,7 +240,6 @@
     "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623042-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6309899264338890481-y.jpg",
-    "Attachments/telegram-cloud-photo-size-5-6145438055972670416-y.jpg",
-    "Attachments/Pasted image 20260414235324.png"
+    "Attachments/telegram-cloud-photo-size-5-6145438055972670416-y.jpg"
   ]
 }
