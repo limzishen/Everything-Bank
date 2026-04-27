@@ -22,30 +22,49 @@
             }
           },
           {
-            "id": "478ed5d345fa12c3",
+            "id": "01b12b17103ab92a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Thoughts/Project Idea.md",
+                "file": "Data Structures and Algo Techniques/Abstract Syntax Tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Idea"
+              "title": "Abstract Syntax Tree"
             }
           },
           {
-            "id": "01b12b17103ab92a",
+            "id": "797a6a36732c906f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "DB/Relationship Exception.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Relationship Exception"
+            }
+          },
+          {
+            "id": "cb4c3aee07d00c00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DB/Stored Procedure and Triggers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stored Procedure and Triggers"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -137,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/Data Normalisation Forms.md",
+                "file": "DB/Trigger.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Data Normalisation Forms"
+              "title": "Outgoing links from Trigger"
             }
           },
           {
@@ -218,36 +237,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "82fb9955531ef4f0",
+  "active": "cb4c3aee07d00c00",
   "lastOpenFiles": [
-    "Random Thoughts/Project Idea.md",
-    "DB/Data Normalisation Forms.md",
-    "DB/Dependecy Preservation check.md",
-    "DB/Minimal Basis.md",
-    "DB/DDL.md",
-    "Leetcode Techniques/SkipList.md",
-    "Leetcode Techniques/Topological sorting.md",
-    "Random Thoughts/C++ Exchange Engine.md",
-    "DB/Functional Dependency.md",
-    "DB/CQRS.md",
-    "DB/ERD Cardinality.md",
-    "DB/Optimise Query.md",
-    "DB/Acid.md",
-    "DB/Asynchronous Query.md",
-    "README.md",
+    "Untitled.md",
+    "DB/Stored Procedure and Triggers.md",
     "DB/Relationship Exception.md",
-    "DB/Relational Model.md",
+    "DB/CQRS.md",
+    "DB/Buffer.md",
+    "DB/Data Normalisation Forms.md",
+    "DB/DDL.md",
+    "DB/Dependecy Preservation check.md",
+    "DB/ERD Cardinality.md",
+    "DB/Functional Dependency.md",
+    "DB/Minimal Basis.md",
+    "DB/Optimise Query.md",
     "DB/Read Heavy vs Write Heavy.md",
-    "OS/Thread.md",
+    "DB/Relational Model.md",
+    "DB/Sharding.md",
+    "DB/SQL.md",
+    "DB/SQL Commands.md",
+    "DB/SQL table schema.md",
+    "DB/Trigger.md",
+    "Data Structures and Algo Techniques/Abstract Syntax Tree.md",
+    "Random Thoughts/Project Idea.md",
+    "DB/Asynchronous Query.md",
+    "DB/Acid.md",
+    "Data Structures and Algo Techniques/SkipList.md",
+    "Data Structures and Algo Techniques/Topological sorting.md",
+    "Random Thoughts/C++ Exchange Engine.md",
     "Attachments/Pasted image 20260424012639.png",
-    "OS/Multi-level Feedback Queue.md",
-    "OS/Memory.md",
-    "OS/Fork.md",
-    "OS/CPU Core vs Threads.md",
     "OS/book.pdf",
-    "Network/Network.md",
-    "CPU Architecture/MESI protocol.md",
-    "CPU Architecture/Datapath and Control Signals.md",
     "Attachments/Pasted image 20251211230737.png",
     "Attachments/Pasted image 20251209205705.png",
     "Attachments/Pasted image 20251208002322.png",

@@ -40,5 +40,9 @@ This combines the employee table and the work for relationship table into one
 Ensures every employee work for (1, 1)
 
 ## Exception 3 
+What happens when 2 different company have the same emp number for 2 different enployee 
+The incorrect schema cant enforce this as allemp have to be unique 
+Using the company name as a partial key allows for multiple company to have the same employee name 
+
 ![[Pasted image 20260301115026.png]]
 ![[Pasted image 20260301115108.png]]
