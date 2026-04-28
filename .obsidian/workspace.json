@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cb4c3aee07d00c00",
+            "id": "dfc753d4003bba5d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Plans/HFT SWE resources.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Data Structures and Algo Techniques/Topological sorting.md",
+                "bFile": "Data Structures and Algo Techniques/Topological sorting.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "HFT SWE resources"
+              "icon": "diff",
+              "title": "Diff: Topological sorting  (Working Tree)"
             }
           }
         ]
@@ -194,11 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cb4c3aee07d00c00",
+  "active": "dfc753d4003bba5d",
   "lastOpenFiles": [
-    "DB/Data Normalisation Forms.md",
-    "Plans/HFT SWE resources.md",
+    "README.md",
+    "Data Structures and Algo Techniques/Topological sorting.md",
+    "Data Structures and Algo Techniques/SkipList.md",
+    "Data Structures and Algo Techniques/Sliding Window.md",
+    "Data Structures and Algo Techniques/LRU Cache.md",
+    "Data Structures and Algo Techniques/Dirty Flag.md",
     "Data Structures and Algo Techniques/Abstract Syntax Tree.md",
+    "Plans/HFT SWE resources.md",
+    "DB/Data Normalisation Forms.md",
     "DB/Relationship Exception.md",
     "DB/Stored Procedure and Triggers.md",
     "Untitled.md",
@@ -216,12 +222,6 @@
     "DB/SQL.md",
     "DB/SQL Commands.md",
     "DB/SQL table schema.md",
-    "DB/Trigger.md",
-    "Random Thoughts/Project Idea.md",
-    "DB/Asynchronous Query.md",
-    "DB/Acid.md",
-    "Data Structures and Algo Techniques/SkipList.md",
-    "Data Structures and Algo Techniques/Topological sorting.md",
     "Attachments/Pasted image 20260424012639.png",
     "OS/book.pdf",
     "Attachments/Pasted image 20251211230737.png",
