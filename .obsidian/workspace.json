@@ -8,63 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "82fb9955531ef4f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/Data Normalisation Forms.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Normalisation Forms"
-            }
-          },
-          {
-            "id": "01b12b17103ab92a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Structures and Algo Techniques/Abstract Syntax Tree.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Abstract Syntax Tree"
-            }
-          },
-          {
-            "id": "797a6a36732c906f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/Relationship Exception.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Relationship Exception"
-            }
-          },
-          {
             "id": "cb4c3aee07d00c00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/Stored Procedure and Triggers.md",
+                "file": "Plans/HFT SWE resources.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stored Procedure and Triggers"
+              "title": "HFT SWE resources"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -239,12 +196,14 @@
   },
   "active": "cb4c3aee07d00c00",
   "lastOpenFiles": [
-    "Untitled.md",
-    "DB/Stored Procedure and Triggers.md",
+    "DB/Data Normalisation Forms.md",
+    "Plans/HFT SWE resources.md",
+    "Data Structures and Algo Techniques/Abstract Syntax Tree.md",
     "DB/Relationship Exception.md",
+    "DB/Stored Procedure and Triggers.md",
+    "Untitled.md",
     "DB/CQRS.md",
     "DB/Buffer.md",
-    "DB/Data Normalisation Forms.md",
     "DB/DDL.md",
     "DB/Dependecy Preservation check.md",
     "DB/ERD Cardinality.md",
@@ -258,13 +217,11 @@
     "DB/SQL Commands.md",
     "DB/SQL table schema.md",
     "DB/Trigger.md",
-    "Data Structures and Algo Techniques/Abstract Syntax Tree.md",
     "Random Thoughts/Project Idea.md",
     "DB/Asynchronous Query.md",
     "DB/Acid.md",
     "Data Structures and Algo Techniques/SkipList.md",
     "Data Structures and Algo Techniques/Topological sorting.md",
-    "Random Thoughts/C++ Exchange Engine.md",
     "Attachments/Pasted image 20260424012639.png",
     "OS/book.pdf",
     "Attachments/Pasted image 20251211230737.png",

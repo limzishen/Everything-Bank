@@ -1,5 +1,3 @@
-
-
 # Stored Procedures and Functions
 
 Functions in PL/pgSQL allow you to encapsulate logic, accept parameters, and return various data types.
@@ -65,7 +63,7 @@ BEGIN
 END;
 ```
 
-## 3. Triggers
+# Triggers
 
 Triggers are special functions that automatically execute in response to database events (like `INSERT`, `UPDATE`, or `DELETE`). Creating a trigger involves two steps: writing the trigger function and defining the trigger itself.
 
@@ -90,18 +88,14 @@ FOR EACH ROW -- (Optional for row-level trigger)
 EXECUTE PROCEDURE <function_name>();
 ```
 
-### Trigger Behavior and Validation Checks
+## Trigger Behavior and Validation Checks
 
 Handling successes and failures depends heavily on whether the trigger fires `BEFORE` or `AFTER` the event.
 
 - **Handling Success:** `RETURN NEW;` allows the operation to proceed successfully.
-    
 - **Handling Failure (Failing Trigger Check):**
-    
-    - `RETURN NULL;`: No error message is thrown, but the operation is skipped/aborted for that specific row.
-        
-    - `RAISE EXCEPTION`: Stops the entire transaction and the transaction is rolled back.
-        
+	- `RETURN NULL;`: No error message is thrown, but the operation is skipped/aborted for that specific row.
+- `RAISE EXCEPTION`: Stops the entire transaction and the transaction is rolled back.
 
 **`BEFORE` vs `AFTER` Constraints:**
 
@@ -115,7 +109,6 @@ Handling successes and failures depends heavily on whether the trigger fires `BE
 Inside a trigger function, you have access to the state of the row before (`OLD`) and after (`NEW`) the triggering event.
 
 - **`OLD`**: Gives you the row value _before_ changes occur. For a `DELETE` trigger, returning `OLD` allows the deletion to proceed.
-    
 
 |Timing|`OLD` Record|`NEW` Record|
 |---|---|---|
