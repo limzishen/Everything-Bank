@@ -11,14 +11,12 @@
             "id": "dfc753d4003bba5d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Plans/Summer 2026 Plans.md",
-                "mode": "source",
-                "source": false
+                "file": "Cpp/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Summer 2026 Plans"
+              "icon": "lucide-file-text",
+              "title": "A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition"
             }
           }
         ]
@@ -196,8 +194,12 @@
   },
   "active": "dfc753d4003bba5d",
   "lastOpenFiles": [
-    "Random Thoughts/15-practice-uml-drawings.md",
     "Plans/Summer 2026 Plans.md",
+    "Cpp/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
+    "Cpp/9780136816485_Sample.pdf",
+    "Plans/Concurrency Learning plan.md",
+    "Plans/HFT SWE resources.md",
+    "Random Thoughts/15-practice-uml-drawings.md",
     "Concurrency/Lock Free Data Structure/Left Right Crate.md",
     "Data Structures and Algo Techniques/Topological sorting.md",
     "Data Structures and Algo Techniques/LRU Cache.md",
@@ -213,15 +215,12 @@
     "Data Structures and Algo Techniques/SkipList.md",
     "Data Structures and Algo Techniques/Sliding Window.md",
     "Data Structures and Algo Techniques/Dirty Flag.md",
-    "Plans/HFT SWE resources.md",
     "DB/Relationship Exception.md",
     "DB/Stored Procedure and Triggers.md",
     "Untitled.md",
     "DB/CQRS.md",
     "DB/Buffer.md",
     "DB/ERD Cardinality.md",
-    "DB/Functional Dependency.md",
-    "DB/Minimal Basis.md",
     "Attachments/Pasted image 20260424012639.png",
     "OS/book.pdf",
     "Attachments/Pasted image 20251211230737.png",
@@ -236,8 +235,6 @@
     "Random Thoughts",
     "Programming Languages",
     "Plans",
-    "OS",
-    "OOP",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623042-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6309899264338890481-y.jpg",

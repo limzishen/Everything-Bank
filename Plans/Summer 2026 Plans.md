@@ -1,4 +1,17 @@
 # Goals 
-Learn how to manage threading 
+Learn threading
 Learn C++ 
-Build a project regarding lock free queue and lock free data structure 
+Build a project regarding lock free data structure - probably updated exchange to C++ 
+Can build an exchange that involves all parts 
+
+Topics i wanna get good on 
+Network
+C++ in general 
+Good understanding of OS and memory 
+Learn up on performant software 
+
+# Things already in plan 
+Work on python concurrency debugger with Dylan and Zhao Huan 
+
+
+# Schedule
