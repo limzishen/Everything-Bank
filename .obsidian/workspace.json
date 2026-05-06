@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ff54854f44e78c66",
+        "id": "8b29f2f0967bad40",
         "type": "tabs",
         "children": [
           {
-            "id": "dfc753d4003bba5d",
+            "id": "4f3ba3727d745637",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Cpp/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -192,10 +190,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dfc753d4003bba5d",
+  "active": "d34df1fa5203ab05",
   "lastOpenFiles": [
+    "Cpp/initialization.md",
+    "Reference material",
+    "Attachments/Pasted image 20260506140326.png",
+    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
+    "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
+    "Cpp/Unconfirmed 71849.crdownload",
     "Plans/Summer 2026 Plans.md",
-    "Cpp/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
     "Cpp/9780136816485_Sample.pdf",
     "Plans/Concurrency Learning plan.md",
     "Plans/HFT SWE resources.md",
@@ -228,16 +231,12 @@
     "Attachments/Pasted image 20251208002322.png",
     "Attachments/Pasted image 20251207184027.png",
     "Attachments/Pasted image 20250919000556.png",
-    "Concurrency/C++ Concurrency in Action copy.pdf",
+    "Reference material/C++ Concurrency in Action copy.pdf",
     "Untitled.base",
     "Untitled 1.base",
     "Scaling and deployment",
-    "Random Thoughts",
-    "Programming Languages",
-    "Plans",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623042-y.jpg",
-    "Attachments/telegram-cloud-photo-size-5-6309899264338890481-y.jpg",
-    "Attachments/telegram-cloud-photo-size-5-6145438055972670416-y.jpg"
+    "Attachments/telegram-cloud-photo-size-5-6309899264338890481-y.jpg"
   ]
 }
