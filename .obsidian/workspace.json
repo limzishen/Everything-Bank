@@ -11,10 +11,12 @@
             "id": "4f3ba3727d745637",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "pdf",
+              "state": {
+                "file": "Reference material/OSTEP.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "OSTEP"
             }
           }
         ]
@@ -192,10 +194,10 @@
   },
   "active": "d34df1fa5203ab05",
   "lastOpenFiles": [
+    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
     "Cpp/initialization.md",
     "Reference material",
     "Attachments/Pasted image 20260506140326.png",
-    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
     "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
     "Cpp/Unconfirmed 71849.crdownload",
     "Plans/Summer 2026 Plans.md",
@@ -223,9 +225,8 @@
     "Untitled.md",
     "DB/CQRS.md",
     "DB/Buffer.md",
-    "DB/ERD Cardinality.md",
     "Attachments/Pasted image 20260424012639.png",
-    "OS/book.pdf",
+    "Reference material/OSTEP.pdf",
     "Attachments/Pasted image 20251211230737.png",
     "Attachments/Pasted image 20251209205705.png",
     "Attachments/Pasted image 20251208002322.png",
