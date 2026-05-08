@@ -11,15 +11,46 @@
             "id": "4f3ba3727d745637",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Reference material/OSTEP.pdf"
+                "file": "Cpp/initialization.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "OSTEP"
+              "icon": "lucide-file",
+              "title": "initialization"
+            }
+          },
+          {
+            "id": "5652d1841b427200",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp/initialization.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "initialization"
+            }
+          },
+          {
+            "id": "b5882b45a4cb30c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp/Header Files.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Header Files"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -192,13 +223,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d34df1fa5203ab05",
+  "active": "b5882b45a4cb30c4",
   "lastOpenFiles": [
-    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
+    "Attachments/Pasted image 20260507205025.png",
     "Cpp/initialization.md",
+    "Cpp/Header Files.md",
+    "Cpp/IOstream.md",
+    "Cpp/Unions.md",
+    "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
+    "Reference material/OSTEP.pdf",
+    "Reference material/C++ Concurrency in Action.pdf",
+    "Reference material/C++ Concurrency in Action copy.pdf",
+    "OOP/OOP.md",
+    "OS/CPU Core vs Threads.md",
+    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
     "Reference material",
     "Attachments/Pasted image 20260506140326.png",
-    "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
     "Cpp/Unconfirmed 71849.crdownload",
     "Plans/Summer 2026 Plans.md",
     "Cpp/9780136816485_Sample.pdf",
@@ -220,22 +260,14 @@
     "Data Structures and Algo Techniques/SkipList.md",
     "Data Structures and Algo Techniques/Sliding Window.md",
     "Data Structures and Algo Techniques/Dirty Flag.md",
-    "DB/Relationship Exception.md",
-    "DB/Stored Procedure and Triggers.md",
-    "Untitled.md",
-    "DB/CQRS.md",
-    "DB/Buffer.md",
     "Attachments/Pasted image 20260424012639.png",
-    "Reference material/OSTEP.pdf",
     "Attachments/Pasted image 20251211230737.png",
     "Attachments/Pasted image 20251209205705.png",
     "Attachments/Pasted image 20251208002322.png",
     "Attachments/Pasted image 20251207184027.png",
     "Attachments/Pasted image 20250919000556.png",
-    "Reference material/C++ Concurrency in Action copy.pdf",
     "Untitled.base",
     "Untitled 1.base",
-    "Scaling and deployment",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623048-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6336931170024623042-y.jpg",
     "Attachments/telegram-cloud-photo-size-5-6309899264338890481-y.jpg"

@@ -72,3 +72,13 @@ for (auto& x: v) {
 	// x is mutated
 }
 ```
+
+# Pass by reference 
+``` 
+void sort(std::vector<double>& v); //sorts the vector through the reference 
+
+void sort(const std::vector<double>&) // pass by reference but not mutate the value
+```
+
+## nullptr 
+Similar to java null but used for pointers 
