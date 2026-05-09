@@ -82,3 +82,45 @@ void sort(const std::vector<double>&) // pass by reference but not mutate the va
 
 ## nullptr 
 Similar to java null but used for pointers 
+
+
+# Class constructor 
+
+```
+export module Vector; // defining the module called "Vector"
+export class Vector {
+	public:
+		Vector(int s);
+		double& operator[](int i);
+		int size();
+	private:
+		double∗ elem; int sz; // elem points to an array of sz doubles
+		
+}
+
+Vector::Vector(int s)
+	:elem{new double[s]}, sz{s} {} // this directly initialise the elements 
+// no need for body 
+
+// initialize members
+double& Vector::operator[](int i){
+	 return elem[i];
+}
+
+int Vector::size() {
+	return sz;
+}
+
+export bool operator==(const Vector& v1, const Vector& v2) {
+	if (v1.size()!=v2.size()) {
+		return false;
+	}
+
+	for (int i = 0; i<v1.size(); ++i) {
+		if (v1[i]!=v2[i]){
+			return false;
+			return true;
+		}
+	}
+}
+```

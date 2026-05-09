@@ -44,3 +44,16 @@ Vector::Vector(int s)
 - Transitivity:  all the code needed for th header file have to also be express 
 
 # Module
+## Advantage of module over header files 
+
+- Reduce fragility 
+	- if multiple header files use the same constant but defined differently things wont crash 
+- More efficient 
+	- Less repeated compiling of the header files 
+
+
+# Namespace 
+Can span multiple files 
+Basically a library 
+
+
