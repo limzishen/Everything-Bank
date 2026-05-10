@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp/Containers.md",
+                "file": "Cpp/Classes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Containers"
+              "title": "Classes"
             }
           },
           {
@@ -210,10 +210,10 @@
   },
   "active": "b5882b45a4cb30c4",
   "lastOpenFiles": [
-    "Cpp/initialization.md",
-    "Cpp/Containers.md",
-    "Cpp/Error Handling.md",
     "Random Thoughts/General notes while studying.md",
+    "Cpp/Classes.md",
+    "Cpp/initialization.md",
+    "Cpp/Error Handling.md",
     "Cpp/Header Files.md",
     "Cpp/Function Param and Return.md",
     "Attachments/Pasted image 20260507205025.png",
