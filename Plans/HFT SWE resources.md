@@ -53,6 +53,7 @@ Rust (For crypto-focused HFTs):
   1. https://rust-book.cs.brown.edu/title-page.html - Intro to Rust book
   2. https://github.com/rust-lang/rustlings  - Small Rust challenges to get used to the language.
   3. https://rust-lang.github.io/async-book/part-guide/intro.html - Async Rust guide (Also read Tokio docs + watch
+
 Jon Gjengset: Decrusting tokio crate on YT).
   4. https://rust-unofficial.github.io/patterns/intro.html - Design patterns.
   5. https://nnethercote.github.io/perf-book/title-page.html - Rust perf book.
