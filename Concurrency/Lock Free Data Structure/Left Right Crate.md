@@ -7,7 +7,7 @@ This is slow because you can only read one at a time
 **Reader writer locks**
 Allow multiple reader to read concurrently 
 Even though performance might seems good for High ratio of reads to writes 
-There are problems with this due to [[cache]] [[MESI protocol]] 
+There are problems with this due to [[CPU Architecture/cache]] [[MESI protocol]] 
 Each time a reader tries to acquire a lock, it will need to access the global variable to update the count and update the cache in each L3 cache in each core 
 The cross core validation is really expensive
 Reader writer requires a write i.e. writing to the global count of readers
