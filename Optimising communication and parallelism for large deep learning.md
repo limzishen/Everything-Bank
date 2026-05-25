@@ -33,3 +33,13 @@ large cost of attention layer
 
 ![[Pasted image 20260525143008.png]]
 ![[Pasted image 20260525143233.png]]
+![[Pasted image 20260525143444.png]]
+
+
+# Communication challenges 
+![[Pasted image 20260525143832.png]]
+![[Pasted image 20260525144135.png]]
+![[Pasted image 20260525144256.png]]
+![[Pasted image 20260525144403.png]]
+reduce using odd even method 
+![[Pasted image 20260525144611.png]]
