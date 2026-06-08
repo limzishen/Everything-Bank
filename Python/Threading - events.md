@@ -14,13 +14,20 @@ The lock primitive does not belong to any thread
 
 # Events 
 Event is used like a signal to communicate across threads 
-## .wait()
-place the thread on alert, waiting for other thread to tell them the next action 
-## .set()
-tells rest of the threads that are on wait to star 
 
+**False = "not ready yet, stop and wait"**
+**True = "good to go, keep moving"**
+
+![[Pasted image 20260604144204.png]]
+
+## .wait()
+**`.wait()`** Called by a thread that needs to pause. Checks the flag — if `True`, passes straight through. If `False`, parks the thread and costs no CPU until `.set()` wakes it up. Optionally takes a timeout so it doesn't wait forever.
+
+If flag is `True`, its as if wait is ignored everything else will just run 
+## .set()
+Flips the flag to `True`. Any thread currently parked on `.wait()` wakes up and continues running. This is how you send the "go" signal. 
 ## .clear()
-Blocks all incoming wait 
+Flips the flag back to `False`. Doesn't affect any currently running threads — they're already gone. It just means the next thread to call `.wait()` will block. Used to re-arm the event for the next cycle.
 
 ```
 import threading
