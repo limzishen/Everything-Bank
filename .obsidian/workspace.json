@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "65c909c3c26fc5c1",
+        "id": "d96c7f3252dcef56",
         "type": "tabs",
         "children": [
           {
-            "id": "949ee5706299750c",
+            "id": "ba236c72c804b788",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concurrency/Semaphore.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Semaphore"
+              "title": "New tab"
             }
           }
         ]
@@ -194,21 +190,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "949ee5706299750c",
+  "active": "ba236c72c804b788",
   "lastOpenFiles": [
+    "Reference material/Fundamentals_of_Data_Engineering_Reis,_JoeHousley,_Matt_Z_Library.pdf",
+    "Reference material/a-practical-guide-to-quantitative-finance-interviews.pdf",
+    "Reference material/CSAPP_2016.pdf",
+    "Reference material/computer-networking-a-top-down-approach-8th-edition.pdf",
+    "Reference material/C++ Concurrency in Action.pdf",
+    "Reference material/Algorithms - Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh V. Vazirani.pdf",
+    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
+    "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
+    "Reference material/PerformanceAnalysisAndTuningOnModernCPUs_SecondEdition.pdf",
+    "Reference material/OSTEP.pdf",
+    "Reference material/ISLP_website.pdf",
     "Concurrency/Producer Consumer Problem.md",
     "Concurrency/Semaphore.md",
     "Concurrency/Mutex.md",
     "Concurrency/Lamport Bakery algorithm.md",
-    "Reference material/Algorithms - Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh V. Vazirani.pdf",
     "Python/Threading - events.md",
-    "Reference material/PerformanceAnalysisAndTuningOnModernCPUs_SecondEdition.pdf",
-    "Reference material/OSTEP.pdf",
-    "Reference material/computer-networking-a-top-down-approach-8th-edition.pdf",
-    "Reference material/Fundamentals_of_Data_Engineering_Reis,_JoeHousley,_Matt_Z_Library.pdf",
-    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
-    "Reference material/C++ Concurrency in Action.pdf",
-    "Reference material/CSAPP_2016.pdf",
     "Data Structures and Algo Techniques/Concepts im unfamiliar with.md",
     "Data Structures and Algo Techniques/Binary Upliftng.md",
     "Cpp/initialization.md",
@@ -227,12 +226,9 @@
     "Pray AST/General.md",
     "Attachments/Pasted image 20260604144204.png",
     "Concurrency/Concurrency Testing/PCT (probabilistic concurrency testing).md",
-    "Concurrency/Concurrency Testing",
     "python import system.md",
     "Meeting 2.md",
     "Pray AST/Bug.md",
-    "Pray AST/how it works.md",
-    "Tools",
     "Attachments/Pasted image 20260525144611.png",
     "Attachments/Pasted image 20260525144403.png",
     "Attachments/Pasted image 20260525144256.png",
