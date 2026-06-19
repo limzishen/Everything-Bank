@@ -11,10 +11,14 @@
             "id": "ba236c72c804b788",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Concurrency/Semaphore.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Semaphore"
             }
           }
         ]
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/Multi-level Feedback Queue.md",
+                "file": "Concurrency/Semaphore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Multi-level Feedback Queue"
+              "title": "Backlinks for Semaphore"
             }
           },
           {
@@ -109,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/Trigger.md",
+                "file": "Concurrency/Semaphore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Trigger"
+              "title": "Outgoing links from Semaphore"
             }
           },
           {
@@ -152,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/book.pdf",
+                "file": "Concurrency/Semaphore.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of book"
+              "title": "Outline of Semaphore"
             }
           },
           {
@@ -190,20 +194,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ba236c72c804b788",
+  "active": "d34df1fa5203ab05",
   "lastOpenFiles": [
+    "Concurrency/Producer Consumer Problem.md",
+    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
+    "Reference material/Algorithms - Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh V. Vazirani.pdf",
     "Reference material/Fundamentals_of_Data_Engineering_Reis,_JoeHousley,_Matt_Z_Library.pdf",
     "Reference material/a-practical-guide-to-quantitative-finance-interviews.pdf",
     "Reference material/CSAPP_2016.pdf",
     "Reference material/computer-networking-a-top-down-approach-8th-edition.pdf",
     "Reference material/C++ Concurrency in Action.pdf",
-    "Reference material/Algorithms - Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh V. Vazirani.pdf",
-    "Reference material/A Tour of C++ (C++ In-depth) -- Bjarne Stroustrupy Third Edition.pdf",
     "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
     "Reference material/PerformanceAnalysisAndTuningOnModernCPUs_SecondEdition.pdf",
     "Reference material/OSTEP.pdf",
-    "Reference material/ISLP_website.pdf",
-    "Concurrency/Producer Consumer Problem.md",
     "Concurrency/Semaphore.md",
     "Concurrency/Mutex.md",
     "Concurrency/Lamport Bakery algorithm.md",
