@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pray AST/Pray AST thoughts.md",
+                "file": "Frontend/React.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pray AST thoughts"
+              "title": "React"
             }
           }
         ],
@@ -237,10 +237,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f163b378e3ff9921",
+  "active": "d34df1fa5203ab05",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Frontend/React-Redux.md",
     "Pray AST/Pray AST thoughts.md",
+    "Web Dev",
+    "Untitled.md",
     "Pray AST/Bug.md",
     "Pray AST/Cooperative locking.md",
     "Pray AST/General.md",
@@ -256,7 +258,6 @@
     "Reference material/C++ Concurrency in Action.pdf",
     "Reference material/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf",
     "Reference material/PerformanceAnalysisAndTuningOnModernCPUs_SecondEdition.pdf",
-    "Reference material/OSTEP.pdf",
     "Concurrency/Mutex.md",
     "Concurrency/Lamport Bakery algorithm.md",
     "Python/Threading - events.md",
@@ -274,7 +275,6 @@
     "Random Stuff/Optimising communication and parallelism for large deep learning.md",
     "Random Thoughts/General notes while studying.md",
     "Random Thoughts/Some HFT SWE questions.md",
-    "Pray AST/meeting 3 - june 5.md",
     "Attachments/Pasted image 20260604144204.png",
     "Attachments/Pasted image 20260525144611.png",
     "Attachments/Pasted image 20260525144403.png",
