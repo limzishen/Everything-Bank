@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "Google Agent talk"
             }
+          },
+          {
+            "id": "f58eda45b76d722d",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "conflict-files-obsidian-git.md",
+                "bFile": "conflict-files-obsidian-git.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: conflict-files-obsidian-git  (Working Tree)"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -237,10 +251,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5bf59789ba780df1",
+  "active": "f58eda45b76d722d",
   "lastOpenFiles": [
-    "Pray AST/Pray AST thoughts.md",
+    "conflict-files-obsidian-git.md",
     "Google Agent talk.md",
+    "Frontend/React-Router.md",
+    "Frontend/React-Redux.md",
+    "Frontend/React Hooks.md",
+    "Attachments/Pasted image 20260623172732.png",
+    "Pray AST/Pray AST thoughts.md",
     "Pray AST/Bug.md",
     "Pray AST/Cooperative locking.md",
     "Pray AST/General.md",
@@ -271,10 +290,6 @@
     "Plans/Detailed Plans.md",
     "Plans/Concurrency Learning plan.md",
     "Plans/Concurrency and OS roadmap.md",
-    "Random Stuff/Optimising communication and parallelism for large deep learning.md",
-    "Random Thoughts/General notes while studying.md",
-    "Random Thoughts/Some HFT SWE questions.md",
-    "Pray AST/meeting 3 - june 5.md",
     "Attachments/Pasted image 20260604144204.png",
     "Attachments/Pasted image 20260525144611.png",
     "Attachments/Pasted image 20260525144403.png",
@@ -283,7 +298,6 @@
     "Attachments/Pasted image 20260525143832.png",
     "Attachments/Pasted image 20260525143444.png",
     "Attachments/Pasted image 20260525143233.png",
-    "Attachments/Pasted image 20260525143008.png",
-    "Attachments/Pasted image 20260525142914.png"
+    "Attachments/Pasted image 20260525143008.png"
   ]
 }
