@@ -1,4 +1,10 @@
 workspace.json
 
-# Copyrighted stuff ig 
+# Copyrighted stuff ig
 /Reference material/
+
+# Quartz build artifacts
+quartz/node_modules/
+quartz/public/
+quartz/.quartz-cache/
+quartz/.quartz/
