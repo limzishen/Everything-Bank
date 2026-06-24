@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures and Algo Techniques/Dirty Flag.md",
+                "file": "Pray AST/Pray AST thoughts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dirty Flag"
+              "title": "Pray AST thoughts"
             }
           }
         ],
@@ -225,6 +225,7 @@
   },
   "active": "407dc11c44694be3",
   "lastOpenFiles": [
+    "Data Structures and Algo Techniques/Dirty Flag.md",
     "Data Structures and Algo Techniques/Concepts im unfamiliar with.md",
     "ExpressJs.md",
     "index.md",
@@ -262,7 +263,6 @@
     "quartz/docs/plugins/ReaderMode.md",
     "quartz/docs/plugins/PageTitle.md",
     "quartz/docs/plugins/OxHugoFlavoredMarkdown.md",
-    "quartz/docs/plugins/Latex.md",
     "quartz/docs/images/quartz-layout-tablet.png",
     "quartz/docs/images/social-image-preview-dark.png",
     "quartz/docs/images/giscus-results.png",
