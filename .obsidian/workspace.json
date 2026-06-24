@@ -34,23 +34,9 @@
               "icon": "lucide-file",
               "title": "React Hooks"
             }
-          },
-          {
-            "id": "407dc11c44694be3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pray AST/Pray AST thoughts.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pray AST thoughts"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -223,12 +209,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "407dc11c44694be3",
+  "active": "31a379c9a1968400",
   "lastOpenFiles": [
+    "quartz/docs/configuration.md",
+    "Backend/ExpressJs.md",
+    "quartz/docs/getting-started/installation.md",
+    "Backend/NodeJS.md",
+    "Attachments/Pasted image 20260624105624.png",
+    "Plans/Concurrency and OS roadmap.md",
+    "Plans/Concurrency Learning plan.md",
+    "Plans/Detailed Plans.md",
+    "Plans/General Plans.md",
+    "Plans/HFT SWE resources.md",
+    "Plans/Summer 2026 Plans.md",
+    "Index.md",
+    "Pray AST/Pray AST thoughts.md",
     "Data Structures and Algo Techniques/Dirty Flag.md",
     "Data Structures and Algo Techniques/Concepts im unfamiliar with.md",
-    "ExpressJs.md",
-    "index.md",
     "General behavioural/Hiring Manager round.md",
     "quartz/quartz.config.yaml.tmp.17593.cd2ac7436c3e",
     "quartz/quartz.config.yaml",
@@ -253,16 +250,6 @@
     "quartz/docs/plugins/TableOfContents.md",
     "quartz/docs/plugins/SyntaxHighlighting.md",
     "quartz/docs/plugins/Static.md",
-    "quartz/docs/plugins/StackedPages.md",
-    "quartz/docs/plugins/Spacer.md",
-    "quartz/docs/plugins/Search.md",
-    "quartz/docs/plugins/RoamFlavoredMarkdown.md",
-    "quartz/docs/plugins/RemoveDrafts.md",
-    "quartz/docs/plugins/ObsidianFlavoredMarkdown.md",
-    "quartz/docs/plugins/RecentNotes.md",
-    "quartz/docs/plugins/ReaderMode.md",
-    "quartz/docs/plugins/PageTitle.md",
-    "quartz/docs/plugins/OxHugoFlavoredMarkdown.md",
     "quartz/docs/images/quartz-layout-tablet.png",
     "quartz/docs/images/social-image-preview-dark.png",
     "quartz/docs/images/giscus-results.png",
@@ -270,7 +257,6 @@
     "quartz/docs/images/giscus-discussion.png",
     "quartz/docs/images/quartz-layout-mobile.png",
     "quartz/docs/images/github-init-repo-options.png",
-    "quartz/docs/images/quartz-layout-desktop.png",
     "quartz/docs/Canvas.canvas"
   ]
 }
