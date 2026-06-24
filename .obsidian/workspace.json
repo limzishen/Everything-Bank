@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ExpressJs.md",
+                "file": "Data Structures and Algo Techniques/Dirty Flag.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ExpressJs"
+              "title": "Dirty Flag"
             }
           }
         ],
@@ -225,8 +225,10 @@
   },
   "active": "407dc11c44694be3",
   "lastOpenFiles": [
-    "General behavioural/Hiring Manager round.md",
+    "Data Structures and Algo Techniques/Concepts im unfamiliar with.md",
     "ExpressJs.md",
+    "index.md",
+    "General behavioural/Hiring Manager round.md",
     "quartz/quartz.config.yaml.tmp.17593.cd2ac7436c3e",
     "quartz/quartz.config.yaml",
     "quartz/tsconfig.json",
@@ -261,8 +263,6 @@
     "quartz/docs/plugins/PageTitle.md",
     "quartz/docs/plugins/OxHugoFlavoredMarkdown.md",
     "quartz/docs/plugins/Latex.md",
-    "quartz/docs/plugins/NoteProperties.md",
-    "quartz/docs/plugins/NotFoundPage.md",
     "quartz/docs/images/quartz-layout-tablet.png",
     "quartz/docs/images/social-image-preview-dark.png",
     "quartz/docs/images/giscus-results.png",
