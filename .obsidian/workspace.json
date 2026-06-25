@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scaling and deployment/Kubernetes.md",
+                "file": "Scaling and deployment/Docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kubernetes"
+              "title": "Docker"
             }
           }
         ],
@@ -211,8 +211,10 @@
   },
   "active": "e15afcba491b9e83",
   "lastOpenFiles": [
-    "Scaling and deployment/Docker.md",
+    "Scaling and deployment/microservice vs monolith.md",
     "Scaling and deployment/Kubernetes.md",
+    "Scaling and deployment/Fault tolerance.md",
+    "Scaling and deployment/Docker.md",
     "AWS.md",
     "quartz/docs/features/Docker Support.md",
     "Backend/NextJS.md",
@@ -248,8 +250,6 @@
     "quartz/quartz/static/og-image.png",
     "quartz/docs/troubleshooting.md",
     "quartz/docs/tags/plugin.md",
-    "quartz/docs/tags/component.md",
-    "quartz/docs/showcase.md",
     "quartz/docs/images/quartz-layout-tablet.png",
     "quartz/docs/images/social-image-preview-dark.png",
     "quartz/docs/images/giscus-results.png",
