@@ -74,3 +74,6 @@ The containers communicate through the docker bridge
 Set up the bridge through docker-compose files
 ![[Pasted image 20260625111407.png]]
 
+# Docker Compose 
+The docker compose yml files allow you to define and manage multi-service application 
+It handles networking, volumes, environment variables, and service dependencies
