@@ -54,5 +54,23 @@ EXPOSE 3000
 CMD ["node", "src/index.js"]
 ```
 
+## Building an Image 
+Updates the image with the new changes to the 
+```dockerfile 
+# Build from the current directory, tag as myapp:1.0
+docker build -t myapp:1.0 .
+```
+
+### Build cache 
+**Good order (cache-friendly):**  COPY package*.json ./ → RUN npm ci → COPY . .
+**Bad order (cache-busting):**  COPY . . → RUN npm ci  (any code change re-runs npm ci)
 # Docker Volumes 
-A 
+A persistent storage for data 
+Typically used to store static files, db data 
+
+# Container networking 
+Each container contains it own [[Network Namespaces]]
+The containers communicate through the docker bridge 
+Set up the bridge through docker-compose files
+![[Pasted image 20260625111407.png]]
+
