@@ -1,7 +1,7 @@
 If you need to delete multiple values in the an array, it can be very costly
 You just dirty flag the value if you dont want it anymore 
 
-```
+```python
 from collections import defaultdict, deque
 
 def solve(Product, Q, Demand):

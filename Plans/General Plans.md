@@ -5,7 +5,7 @@
 4. Scalability 
 5. Git Workflows *
 6. Python language, OOP and pythonic way of coding and java *
-7. Deployment system? [[Docker, Kubernetes]]
+7. Deployment system? [[Kubernetes]]
 8. Scaling 
 9. general AI stuff (maybe some llm a)
 10. system design in banking context 
