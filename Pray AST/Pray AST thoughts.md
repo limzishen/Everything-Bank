@@ -42,8 +42,9 @@ tests/test_reinstall.py
 
 # General Concerns
 1. Changing log level changes output (Consistent if log levels are the same)
-2. Randomized seed if starting seeds are not defined 
-3. each pytest runs does not clean up seeds - it should be in documentation 
+2. Multiprocessing does not share memory - mapping to thread might cause issues
+3. Timing using global time lock (Abit out of scope) - need to gain more context 
+4. 
 
 # Python NativeIO blocking 
 1. FileIO 
@@ -51,4 +52,11 @@ tests/test_reinstall.py
 3. Subprocess (multiprocessing) - instrumented 
 4. Console 
 5. concurrent.Futures 
+
+# Todos 
+1. instrument - socket 
+2. fix multiprocessing 
+3. Time.sleep()
+4. Investigate log levels 
+5. Ask charles how to deal with exploding scheduling points 
 6. 
