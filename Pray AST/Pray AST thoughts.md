@@ -16,7 +16,7 @@ def test_enqueue():
 
     logger.add(sink, format="{message}", enqueue=True) # spawns a multiprocessing thread
     logger.debug("Test") # Main thread pass the value to the worker thread
-    assert len(x) == 0 # this asserts in the main thread checks if the value is not written into the log yet
+    assert len(x) == 0 # this assert in the main thread checks if the value is not written into the log yet
     # This check happens while the worker thread is sleeping 
     
     logger.complete() # main thread check if the logging is completed
