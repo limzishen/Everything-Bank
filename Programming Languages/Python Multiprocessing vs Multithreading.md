@@ -16,6 +16,12 @@ Python GIL thread prevents true parallel processing
 - `_rlock` — a read lock serializing consumers reading from the pipe, so two processes doing get() don't each grab half of one message.
 - `_sem`— a BoundedSemaphore implementing maxsize (and the Full/Empty logic).
 ### Value 
+Allow C primitive to be used as a shared state about multiprocessing thread 
+Python objects are barred from the c primitive 
+
+```
+
+```
 ### Manager 
 
 ### Fork 
