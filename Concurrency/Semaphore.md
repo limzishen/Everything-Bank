@@ -7,4 +7,5 @@ If the counter is 0 nothing run, new task are added into a queue
 
 Use signal() to release the permit and takes a queued task to run 
 
+![[Pasted image 20260706222624.png]]
 
