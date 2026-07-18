@@ -55,4 +55,4 @@ Everything-Bank/          ← Obsidian vault root; all .md notes live here
 - Which plugins are enabled and their options
 - Layout positions of UI components
 
-`.gitignore` excludes `workspace.json` (Obsidian state), `quartz/node_modules/`, `quartz/public/`, and `quartz/.quartz-cache/` — never commit these.
+`.gitignore` excludes `workspace.json` (Obsidian state), `/Reference material/` (copyrighted content), `quartz/node_modules/`, `quartz/public/`, `quartz/.quartz-cache/`, and `quartz/.quartz/` (installed plugins) — never commit these.
