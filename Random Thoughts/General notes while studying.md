@@ -1,6 +1,8 @@
 # Things i still need to improve on 
 1. RAII c++ 
 2. Exceptions assertions error handling something im particularly weak in 
+3. Web Auth JWT access tokens
+4. 
 
 # Things to recheck later 
 1. Const function (check back on virtual function) 
