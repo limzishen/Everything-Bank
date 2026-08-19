@@ -31,16 +31,3 @@
 # DSA 
 1. Revise 2040s and 3230 stuff 
 2. Leetcode 
-3. 
-# Behavioural 
-1. Study GS 
-2. GS values
-	1. Partnership 
-	2. client service 
-	3. Integrity 
-	4. Excellence
-3. GS mission and vision 
-4. GS new tech or new newsgp
-5. personal values
-6. things like what is your greatest challenge 
-7. [[questions fo rbehravioral]]
