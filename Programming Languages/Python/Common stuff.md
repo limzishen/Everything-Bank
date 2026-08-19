@@ -98,7 +98,22 @@ result = "".join(words)
 ```
 f-strings, slicing `s[::-1]`.
 **Scope & closures** — LEGB rule, `global`/`nonlocal`.
+```Python
+count = 0
+def inc():
+    global count
+    count += 1
+```
 
+```Python 
+def counter():
+    n = 0
+    def inc():
+        nonlocal n   # without this: UnboundLocalError
+        n += 1
+        return n
+    return inc
+```
 **Exception handling** — `try/except/else/finally`, catching specific exceptions not bare `except`.
 
 **Truthiness** — empty containers, `0`, `""`, `None` are falsy.
