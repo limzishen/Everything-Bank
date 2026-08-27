@@ -117,3 +117,24 @@ def counter():
 **Exception handling** — `try/except/else/finally`, catching specific exceptions not bare `except`.
 
 **Truthiness** — empty containers, `0`, `""`, `None` are falsy.
+
+**Context manager** - a wrapper to open/close file or lock acquiring 
+To **automatically allocate and release resources** exactly when needed, preventing bugs like resource leaks or file corruption
+
+Without context manager
+```Python 
+# Old/Manual approach
+file = open("data.txt", "w")
+try:
+    file.write("Hello World")
+finally:
+    file.close()  # Guaranteed to run, but code is bulky
+
+```
+
+With context manager 
+```Python 
+# Modern approach using 'with'
+with open("data.txt", "w") as file:
+    file.write("Hello World")  # File closes automatically when you exit this block
+```
