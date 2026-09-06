@@ -1,8 +1,19 @@
 # Things i still need to improve on 
+
+### C++ 
 1. RAII c++ 
-2. Exceptions assertions error handling something im particularly weak in 
-3. Web Auth JWT access tokens
-4. 
+
+### SWE Stuff
+1. Exceptions assertions error handling something im particularly weak in 
+2. Web Auth JWT access tokens
+
+### Parallel/OS stuff 
+1. Computer architecture 
+2. Computer memory/memory virtualisation 
+3. SMT (simultaneous multithreading)
+4. Cores and CPU threads 
+
+
 
 # Things to recheck later 
 1. Const function (check back on virtual function) 
