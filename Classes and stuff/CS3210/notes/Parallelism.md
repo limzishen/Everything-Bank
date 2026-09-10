@@ -30,3 +30,18 @@ SMT architecture share execution unit like:
 Achieves true parallelism. 
 
 
+# Flynns Parallel Architecture Taxenomy 
+## SIMD 
+Single instruction Multiple data 
+Exploit data parallelism 
+
+work on things like AVX intrinsics vector program 
+
+
+![[Pasted image 20260909164116.png]]
+![[Pasted image 20260909164146.png]]
+
+## MISD 
+Multiple instruction single data 
+![[Pasted image 20260909164321.png]]
+
