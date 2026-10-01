@@ -1,1 +1,0 @@
-Alternative the restful APIs 
