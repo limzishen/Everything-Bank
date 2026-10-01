@@ -96,4 +96,7 @@ https://www.reddit.com/r/csbooks/
 3. Store Procedures and Triggers
 4. Database Optimisation
 
-# Bash Scripting 
+# Bash Scripting
+
+# Related
+- [[General Plans]] · [[HFT SWE resources]] · [[Knowledge Gaps]]

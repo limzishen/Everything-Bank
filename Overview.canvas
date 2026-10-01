@@ -1,15 +1,17 @@
 {
 	"nodes":[
-		{"id":"7f44ebbfd2434e0e","type":"text","text":"OS \n- Kernel level SysCall\n- OS level scheduling algorithms\n- Virtualization\n","x":-320,"y":-380,"width":250,"height":120},
-		{"id":"5d8c099eaaa3e154","type":"text","text":"Multiprocessing\n- IPC \n- Process memory, network stack, \n- Memory sharing ","x":-320,"y":-209,"width":250,"height":209},
-		{"id":"b8d97f532cf410e4","type":"text","text":"Threading \n- Memory Model \n- Context Switching ","x":-40,"y":-380,"width":250,"height":171},
-		{"id":"88f0da6fc720fb99","type":"text","text":"Hardware \n- ISA \n- MESI protocol \n- Cache levels\n- Branch prediction optimization ","x":-320,"y":40,"width":250,"height":193},
-		{"id":"d809fd96543966a4","type":"text","text":"Concurrency \n- Deadlock \n- Livelock \n- Spinlocks \n- block locks \n- Semaphore \n- lock free data structure\n- Reader Writer problem \n- Producer Consumer Problem \n- Pessimistic Locking vs Optimistic locking\n- Mutex","x":-40,"y":-169,"width":250,"height":209},
-		{"id":"2be4a9467ad2be96","type":"text","text":"DB \n- DB internals ","x":-40,"y":77,"width":250,"height":156},
-		{"id":"25124cb58349738f","type":"text","text":"Network \n- UDP \n- TCP \n- Network layer \n- Reliable network system \n- websocket \n- ","x":240,"y":-380,"width":250,"height":171},
-		{"id":"b10c34d3465e2eb5","type":"text","text":"Python\n- Python execution model \n- Python memory model \n- Garbage Collection\n- Python Threading - GIL/ft \n- Python Multiprocessing\n- Python Coroutines\n- Runtime Optimisation\n- Compile time optimisation\n\nLibraries: \n- Numpy\n- Pandas\n- AsyncIO ","x":240,"y":-164,"width":250,"height":204},
-		{"id":"74406a97413e4c90","type":"text","text":"Coroutines\n- Python Coroutines \n- Go Coroutines","x":520,"y":-380,"width":250,"height":60},
-		{"id":"504501baafc4bb04","type":"text","text":"ML \n- LSTM\n- XG Boost \n- Linear regression","x":520,"y":-269,"width":250,"height":129}
+		{"id":"7f44ebbfd2434e0e","type":"text","text":"OS \n- Kernel level SysCall\n- OS level scheduling algorithms: [[Process Scheduling]], [[Multi-level Feedback Queue]], [[Random Scheduling]]\n- [[Memory]] virtualisation\n- [[Process]], [[Fork]]\n","x":-320,"y":-380,"width":250,"height":120},
+		{"id":"5d8c099eaaa3e154","type":"text","text":"Multiprocessing\n- IPC ([[Pray Notes]])\n- Process memory, network stack ([[Network Namespaces]])\n- Memory sharing\n- [[Python Multiprocessing vs Multithreading]]","x":-320,"y":-209,"width":250,"height":209},
+		{"id":"b8d97f532cf410e4","type":"text","text":"Threading \n- [[Thread]]\n- Memory Model \n- [[Context Switch]]","x":-40,"y":-380,"width":250,"height":171},
+		{"id":"88f0da6fc720fb99","type":"text","text":"Hardware \n- ISA ([[Datapath and Control Signals]])\n- [[MESI protocol]]\n- Cache levels ([[CPU Cache]])\n- Branch prediction optimization\n- [[Parallelism]]","x":-320,"y":40,"width":250,"height":193},
+		{"id":"d809fd96543966a4","type":"text","text":"Concurrency \n- Deadlock ([[Coffman Conditions]])\n- Livelock \n- Spinlocks ([[Locks]])\n- block locks \n- [[Semaphore]]\n- lock free data structure ([[Left Right Crate]], [[Compare and Swap (CAS)]])\n- Reader Writer problem \n- [[Producer Consumer Problem]]\n- [[Optimistic locking vs Pessimistic locking]]\n- Mutex","x":-40,"y":-169,"width":250,"height":209},
+		{"id":"2be4a9467ad2be96","type":"text","text":"DB \n- DB internals: [[DB indexing]], [[Acid]], [[Optimise Query]]\n- [[SQL]]","x":-40,"y":77,"width":250,"height":156},
+		{"id":"25124cb58349738f","type":"text","text":"Network \n- UDP \n- TCP \n- Network layer ([[Network]])\n- Reliable network system \n- websocket","x":240,"y":-380,"width":250,"height":171},
+		{"id":"b10c34d3465e2eb5","type":"text","text":"Python\n- [[Python Execution Model]]\n- [[Python Memory Model]]\n- Garbage Collection\n- Python Threading - [[GIL]]/ft ([[Threading - events]])\n- Python Multiprocessing\n- Python Coroutines\n- Runtime Optimisation\n- Compile time optimisation\n\nLibraries: \n- Numpy\n- [[Pandas]]\n- [[AsyncIO]]","x":240,"y":-164,"width":250,"height":204},
+		{"id":"74406a97413e4c90","type":"text","text":"Coroutines\n- Python Coroutines ([[AsyncIO]])\n- Go Coroutines","x":520,"y":-380,"width":250,"height":60},
+		{"id":"504501baafc4bb04","type":"text","text":"ML \n- LSTM\n- XG Boost \n- Linear regression","x":520,"y":-269,"width":250,"height":129},
+		{"id":"a1b2c3d4e5f60718","type":"file","file":"Plans/Knowledge Gaps.md","x":520,"y":-120,"width":250,"height":160},
+		{"id":"a1b2c3d4e5f60719","type":"file","file":"Home.md","x":520,"y":60,"width":250,"height":160}
 	],
 	"edges":[
 		{"id":"5b83f0d62eb4685d","fromNode":"7f44ebbfd2434e0e","fromSide":"bottom","toNode":"b8d97f532cf410e4","toSide":"left"},

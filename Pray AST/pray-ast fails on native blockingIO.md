@@ -165,3 +165,6 @@ thread program where thread 1 does `c.recv()` on a loopback socket (or `os.read(
 pipe) before thread 2 sends/writes, run under `pray run` with any scheduler, will hang —
 contrast with the same logic over a `queue.Queue` (redirected to `CoopQueue`), which
 completes. (Demo scripts were explicitly out of scope for this deliverable.)
+
+# Related
+- [[Pray AST]] · [[heap access]] · [[GIL]] · [[AsyncIO]]

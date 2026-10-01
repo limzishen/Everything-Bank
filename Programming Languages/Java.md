@@ -1,3 +1,6 @@
+---
+tags: [ai-edited]
+---
 Function execution
 
 # Code execution 
@@ -15,8 +18,8 @@ Stores static variable
 
 # Garbage Collector 
 Mark and sweep 
-Mark all the unreachable objects in heap 
-Garbage collects them all 
+Mark all objects **reachable** from the GC roots
+Sweep (free) everything left unmarked
 
 ![[Pasted image 20251209205705.png]]
 Use GC Roots to determine which are unreacheble
@@ -24,4 +27,9 @@ Use GC Roots to determine which are unreacheble
 Generational Garbage collection 
 Splits the heap into multiple heap 
 The younger generation triggers garbage collection more often 
-The tenured generation heap will need less garbage collection as the 
+The tenured generation heap needs less frequent collection because most objects die young (the **weak generational hypothesis**), so the survivors are likely to live long.
+
+Details and collector choice: [[Java Garbage Collection]]
+
+# Related
+- [[Java Garbage Collection]] · [[Memory]] · [[Python Memory Model]]

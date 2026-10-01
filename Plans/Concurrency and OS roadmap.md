@@ -64,4 +64,5 @@ Concurrency isn't just about raw threads and manual locks; modern backend develo
 
 By focusing your reading only on these core chapters and immediately implementing them, the dense theory will actually have a place to anchor in your brain.
 
-Which of these phases feels like the right starting line for you right now, or would you like to break down the technical requirements for the custom shell project?
+# Related
+- [[Concurrency Learning plan]] · [[Process]] · [[Fork]] · [[Memory]] · [[Locks]] · [[Semaphore]] · [[Producer Consumer Problem]]

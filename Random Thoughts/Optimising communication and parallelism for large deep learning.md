@@ -43,3 +43,6 @@ large cost of attention layer
 ![[Pasted image 20260525144403.png]]
 reduce using odd even method 
 ![[Pasted image 20260525144611.png]]
+
+# Related
+- [[Parallelism]]

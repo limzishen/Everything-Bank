@@ -1,3 +1,5 @@
+Hash map (key → node) + doubly linked list (recency order). `get`/`put` are both **O(1)**. Head = most recent, tail = eviction victim. Python shortcut: `collections.OrderedDict` with `move_to_end` / `popitem(last=False)`.
+
 ```
 class LRUCache:
     class Node: 
@@ -59,3 +61,6 @@ class LRUCache:
 # param_1 = obj.get(key)
 # obj.put(key,value)
 ```
+
+# Related
+- [[Caching]] · [[CPU Cache]] · [[Redis]]

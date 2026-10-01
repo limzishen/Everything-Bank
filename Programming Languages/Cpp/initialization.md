@@ -1,8 +1,12 @@
+---
+tags: [ai-edited]
+---
 Initialise values on the stack 
 ``` 
 // copy initialization
-int a; 
-a = 4;
+int a = 4;
+
+// (not this: `int a; a = 4;` is default-init + assignment)
 
 // direct initialization 
 int a(4); 
@@ -45,8 +49,8 @@ constexpr double s2 = sqrt(int) // the calculation will be done at compile
 constexpr will throw error if its depended on runtime variable 
 
 vector<double> v {1, 2, 3, 4}; 
-const v_sum = sum(v); // ok sun is calculated at run time
-constexpr v_sum = sum(v); // compilation error since it will try and calculate at compilation 
+const double v_sum = sum(v); // ok sum is calculated at run time
+constexpr double v_sum2 = sum(v); // compilation error since it will try and calculate at compilation 
 
 ```
 ![[Pasted image 20260506140326.png]]
@@ -119,8 +123,11 @@ export bool operator==(const Vector& v1, const Vector& v2) {
 	for (int i = 0; i<v1.size(); ++i) {
 		if (v1[i]!=v2[i]){
 			return false;
-			return true;
 		}
 	}
+	return true;   // fixed: was unreachable inside the if
 }
 ```
+
+# Related
+- [[Classes]] · [[Header Files]] · [[Key Operations]]

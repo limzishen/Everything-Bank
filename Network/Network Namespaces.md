@@ -1,4 +1,4 @@
-Used by [[Docker]], Kubernetes pod 
+Used by [[Docker]] and [[Kubernetes]] pods (all containers in a pod share one netns)
 
 The namespace is an instance of the networking stack 
 The kernel handles the networking stack, storing the protocol and machinery to process the packets 
@@ -40,3 +40,6 @@ The **network interfaces** themselves: `lo`, `eth0`, veth ends, bridges, bond/VL
 ## The kernel's exposed view
 
 - **`/proc/net/` and `/sys/class/net/`** — these aren't separate state so much as the _window_ onto everything above. Inside a namespace, reading `/proc/net/tcp` or `/proc/net/route` or listing `/sys/class/net/` shows _that namespace's_ interfaces, sockets, and routes — which is exactly how tools like `ss`, `netstat`, and `ip` end up namespace-aware for free. They just read these files, and the files reflect whichever netns the process is in.
+
+# Related
+- [[Kubernetes]] · [[Network]] · [[VPC (Virtual private cloud)]] · [[Process]]

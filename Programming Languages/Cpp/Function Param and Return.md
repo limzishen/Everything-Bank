@@ -66,3 +66,6 @@ Entry read_entry(istream& is) {
 	return {s,i};
 }
 ```
+
+# Related
+- [[Key Operations]] · [[initialization]]

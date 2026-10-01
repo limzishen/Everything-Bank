@@ -1,3 +1,6 @@
+---
+tags: [ai-edited]
+---
 
 # Metrics 
 Turn around time = Completion time - arrival time 
@@ -6,7 +9,8 @@ Response time = First time process is run - Arrival time
 # FIFO 
 Slow and inefficient as a big job can block the short job from finishing 
 
-# Shortest Time to completion first 
+# Shortest Job First (SJF) / Shortest Time to Completion First (STCF)
+SJF is non-preemptive. STCF is the preemptive version (a newly arrived shorter job preempts the current one).
 Optimal to minimise the Turn around time 
 Do the shortest task first 
 Issue: 
@@ -25,5 +29,9 @@ Bad turnaround time
 # Task Overlapping 
 Instead of waiting for IO request to run, run a different process to maximise utilisation rate 
 
-# Preemptive Scheduling
-[[Multi-level Feedback Queue]]
+# Without knowing job lengths
+- [[Multi-level Feedback Queue]] (learns from past behaviour)
+- Proportional share: lottery / stride / CFS ([[Random Scheduling]])
+
+# Related
+- [[Process]] · [[Context Switch]] · [[Random Scheduling]]

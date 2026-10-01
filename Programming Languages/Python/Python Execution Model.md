@@ -1,8 +1,11 @@
+---
+tags: [ai-edited]
+---
 # Tokenising 
 The source text are tokenise to simplify the grammatical rules before parsing into AST. 
 Since python use indentation and new line as part of its grammar, the tokenisation is important to ensure that the syntactical structure is context free. 
 # Parsing 
-The token stream generate by the tokenizer will be fed into the parser which builds the Abstract Syntax Tree
+The token stream generate by the tokenizer will be fed into the parser (PEG parser since 3.9) which builds the [[Abstract Syntax Tree]]
 
 Parsing into AST tree provides additional context to the to the tokens
 Example: 
@@ -68,7 +71,7 @@ Provides context to the operators and the NAME value
 it goes through the AST and calculate every every binary expression instead of deferring the calculation to runtime.  (e.g fixed variable calculation like 2 + 2/tuple are computed fold optimization)
 
 # Bytecode Gen
-For each AST node, it recursively vist the nodes and generate stack instructions [[instruction Set Architecture (ISA)]]. 
+For each AST node, it recursively vist the nodes and generate stack-machine instructions (CPython bytecode, a virtual ISA; inspect with `dis.dis`). 
 The instructions are broken down into code blocks in a graph form to represent control flows
 Pseudo instructions are left in and unoptimised
 Jump instruction points to code block instead of numbers
@@ -91,7 +94,7 @@ Contains:
 - instruction pointer 
 - Operand stack
 
+The eval loop drops the [[GIL]] periodically (switch interval) so other threads can run.
 
-
-
-
+# Related
+- [[Abstract Syntax Tree]] · [[Python Memory Model]] · [[Name Mangling]] · [[GIL]] · [[heap access]]

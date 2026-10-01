@@ -42,3 +42,10 @@ void user(R r1, R r2)
 
 
 ```
+
+# Rule of zero / three / five
+- **Rule of zero**: if members manage themselves (`std::vector`, `std::unique_ptr`), declare none of the special members.
+- **Rule of three/five**: if you write any one of destructor / copy ctor / copy assign (/ move ctor / move assign), you almost certainly need all of them. Your class owns a raw resource (see `Vector` in [[Classes]]). This is **RAII**: acquire in the constructor, release in the destructor.
+
+# Related
+- [[Classes]] · [[Function Param and Return]] · [[Overloading function call operator]]

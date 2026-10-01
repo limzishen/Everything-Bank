@@ -1,7 +1,7 @@
 # Things i still need to improve on 
 
 ### C++ 
-1. RAII c++ 
+1. RAII c++ (started in [[Key Operations]])
 
 ### SWE Stuff
 1. Exceptions assertions error handling something im particularly weak in 
@@ -9,12 +9,9 @@
 
 ### Parallel/OS stuff 
 1. Computer architecture 
-2. Computer memory/memory virtualisation 
-3. SMT (simultaneous multithreading)
-4. Cores and CPU threads 
-
-
-
+2. Computer memory/memory virtualisation ([[Memory]])
+3. SMT (simultaneous multithreading) ([[Parallelism]])
+4. Cores and CPU threads ([[Thread]])
 # Things to recheck later 
 1. Const function (check back on virtual function) 
 2. eliding (move and copy optimization)
@@ -29,4 +26,7 @@ read up on this wtf?? page 91
 
 
 # Fray 
-whats the difference between Fray and os level scheduling replacement 
+whats the difference between Fray and os level scheduling replacement (related: [[Pray AST]])
+
+# Related
+- [[Knowledge Gaps]]

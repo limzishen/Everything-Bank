@@ -41,4 +41,7 @@ function ChatRoom({ roomId }) {
 # Performance Hooks 
 Hooks that optimize performance 
 useMemo  - cache the expensive function calls results 
-useCallback = cache the function definition before passing it down 
+useCallback = cache the function definition before passing it down
+
+# Related
+- [[React]] · [[React Best Practices]]

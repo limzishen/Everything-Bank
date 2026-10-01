@@ -1,4 +1,5 @@
 # Unit test 
+Test the smallest unit (a function/class) in isolation. See [[Unit testing]].
 
 # Regression 
 Find bugs induced by change
@@ -19,5 +20,7 @@ Full testing with all the services
 Line of code 
 How many paths of if statement have you covered 
 Looking at what is more important 
-boundary testing to catch edge cases 
+boundary testing to catch edge cases
 
+# Related
+- [[Unit testing]] · [[PCT (probabilistic concurrency testing)]] · [[test plans]]

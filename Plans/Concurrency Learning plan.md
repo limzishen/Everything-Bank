@@ -187,6 +187,5 @@ By the end of the program, you should be able to:
 	•	Understand trade-offs between different synchronization techniques
 	•	Develop systems relevant to high-performance environments
 
-⸻
-
-If you want, I can convert this into a formal document for submission or a weekly checklist tracker.
+# Related
+- [[Concurrency and OS roadmap]] · [[Summer 2026 Plans]] · [[Locks]] · [[Producer Consumer Problem]] · [[Compare and Swap (CAS)]] · [[AsyncIO]]

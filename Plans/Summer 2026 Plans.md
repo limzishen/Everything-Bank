@@ -1,7 +1,7 @@
 # Goals 
-Learn threading
+Learn threading ([[Concurrency Learning plan]], [[Concurrency and OS roadmap]])
 Learn C++ 
-Build a project regarding lock free data structure - probably updated exchange to C++ 
+Build a project regarding lock free data structure - probably updated exchange to C++ ([[Project Idea#C++ Exchange Engine]], [[Left Right Crate]], [[Compare and Swap (CAS)]])
 Can build an exchange that involves all parts 
 
 Topics i wanna get good on 
@@ -18,7 +18,10 @@ No practical socket programming practices
 
 
 # Things already in plan 
-Work on python concurrency debugger with Dylan and Zhao Huan 
+Work on python concurrency debugger with Dylan and Zhao Huan ([[Pray AST]])
 
 
 # Schedule
+
+# Related
+- [[HFT SWE resources]] · [[Knowledge Gaps]]

@@ -37,5 +37,7 @@ DOM (Document Object Model) the HTML rendering of react
 Virtual DOM is virtual representation of the UI as a tree of JavaScript Object 
 State change updates the Virtual DOM tree 
 Run a diffing algorithm with the virtual DOM and actual DOM 
-Update the real DOM 
+Update the real DOM
 
+# Related
+- [[React Hooks]] · [[React-Redux]] · [[React-Router]] · [[React Best Practices]]

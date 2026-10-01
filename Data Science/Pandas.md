@@ -125,3 +125,6 @@ df.dropna(subset=['x'])                     # drop rows null in x
 - Building rows in a loop with `concat`/`append` = quadratic → collect in a list, `concat` once.
 - No query planner — eager, top-to-bottom. Filter before expensive ops yourself.
 - Single-threaded, RAM-hungry (~5–10× data size). Large/parallel → Polars, DuckDB, Dask.
+
+# Related
+- [[SQL Commands]] · [[SQL]]

@@ -98,3 +98,6 @@ class Solution:
             pre[i + 2] = (pre[i + 1] + dp[i + 1]) % MOD 
         return dp[n]
 ```
+
+# Related
+- [[Dirty Flag]]

@@ -25,3 +25,6 @@ One application that handles everything
 1. Harder to scale horizontally 
 2. Limited tech choices 
 3. Entire thing can fail if a part of it fails
+
+# Related
+- [[Kubernetes]] · [[Docker]] · [[Sharding]] · [[SNS (Simple Notification System)]]

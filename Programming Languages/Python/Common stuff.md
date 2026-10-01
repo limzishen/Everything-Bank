@@ -138,3 +138,6 @@ With context manager
 with open("data.txt", "w") as file:
     file.write("Hello World")  # File closes automatically when you exit this block
 ```
+
+# Related
+- [[Name Mangling]] · [[Python Memory Model]] · [[Python Execution Model]]

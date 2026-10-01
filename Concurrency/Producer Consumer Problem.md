@@ -46,3 +46,6 @@ consume():
 
         consumeItem(item)         // process it (outside critical section)
 ```
+
+# Related
+- [[Semaphore]] · [[Locks]] · [[SQS (Simple Queue System)]] · [[Threading - events]]

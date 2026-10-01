@@ -1,10 +1,13 @@
+---
+tags: [ai-edited]
+---
 # Context Switching - threads 
 ## When 
 - Preemptive switch 
 	- Forced by kernel
 	- Higher priority task runs first look [[Multi-level Feedback Queue]]
 - Voluntary Switch
-	- IO bound traffic
+	- IO bound traffic, blocking on a [[Locks|mutex]] / [[Semaphore]], `sleep`, `yield`
 
 
 ## Mechanism
@@ -15,9 +18,13 @@
 5. Switch Kernel Stack to thread B's
 6. Back to user mode
 
-## Cost 
-L!/L2 cache is wiped 
-Kernel user transition overhead 
+## Cost
+- Direct: kernel/user transition and saving/restoring registers (~1–5 µs total including scheduler work).
+- Indirect (usually bigger): the incoming thread finds [[CPU Cache|L1/L2]] and branch predictors **cold**, polluted by the previous thread.
+- **Process** switch (different address space): also switches page tables (CR3), so the TLB is flushed unless PCID/ASID tagging is used. A **thread** switch within the same process keeps the TLB.
+
+> [!warning] Correction
+> Caches are not *wiped* on a context switch. They stay intact but are filled with the other thread's data.
 
 
 ## Kernel stack 
@@ -31,3 +38,5 @@ Thread context are stored here
 4. Cpu States 
 5. Floating Point Calculation states
 
+# Related
+- [[Thread]] · [[Process]] · [[Process Scheduling]] · [[AsyncIO]]

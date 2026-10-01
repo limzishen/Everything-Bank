@@ -9,3 +9,5 @@ Use signal() to release the permit and takes a queued task to run
 
 ![[Pasted image 20260706222624.png]]
 
+# Related
+- [[Locks]] · [[Coffman Conditions]]

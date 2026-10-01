@@ -1,7 +1,11 @@
-## Random scheduling 
-Give a process a random number 
-pick a random number 
-run the process with the random number 
+---
+tags: [ai-edited]
+---
+## Lottery scheduling (random)
+Give each process a number of **tickets** proportional to its share.
+Each time slice, draw a random ticket number in `[0, total_tickets)`.
+Run the process holding that ticket.
+Over time each process gets CPU ≈ its fraction of tickets: probabilistically fair, simple, no global state.
 
 ## Stride Scheduling 
 **Stride** - a value obtained by dividing a arbitrary large number by the process tickets
@@ -30,5 +34,9 @@ Can customise the process time slice by assigning niceness
 V_runtime also increase differently based on the runtime 
 ![[Pasted image 20260223005158.png]]
 
-Use a red black tree to keep track of the order of the job vruntime 
+Use a red black tree to keep track of the order of the job vruntime (O(log n) insert, cached leftmost = next to run)
 
+Note: since Linux 6.6, CFS has been replaced by **EEVDF** (Earliest Eligible Virtual Deadline First), which keeps vruntime but adds latency-aware deadlines.
+
+# Related
+- [[Process Scheduling]] · [[Multi-level Feedback Queue]]

@@ -115,3 +115,6 @@ So heap instrumentation supplies the **switch points**; the scheduler supplies t
 `register_heap_variable_*` / `yield_point` sandwich around each shared access is visible
 inline. See also [[pray-ast fails on native blockingIO]] for the flip side: native C
 blocking calls contain *no* instrumented access, so the token never hands off.
+
+# Related
+- [[Pray AST]] · [[Abstract Syntax Tree]] · [[GIL]] · [[PCT (probabilistic concurrency testing)]]

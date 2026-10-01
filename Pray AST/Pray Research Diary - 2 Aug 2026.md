@@ -7,6 +7,7 @@ generalise the _select_interesting_ across threaading and processes lib
 
 figure out what changepoints are randon in processes wtf 
 
-generalise the urw and surw 
+generalise the urw and surw
 
-
+# Related
+- [[Pray AST]] · [[Pray meeting 24 Jul]] · [[Pray Research Diary - 19 Aug 2026]] · [[Fork]]

@@ -54,6 +54,7 @@ Vector::Vector(int s)
 
 # Namespace 
 Can span multiple files 
-Basically a library 
+Basically a library
 
-
+# Related
+- [[Classes]] · [[Template]]

@@ -68,3 +68,6 @@ private:
 	unique_ptr<Shape> mouth;
 };
 ```
+
+# Related
+- [[Key Operations]] · [[initialization]] · [[Header Files]] · [[Template]]

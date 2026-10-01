@@ -13,5 +13,7 @@ int main()
 ```
 
 ## cin behaviour 
-value input outside of the expected type will be stored as the default value 
+value input outside of the expected type will be stored as the default value
 
+# Related
+- [[initialization]]

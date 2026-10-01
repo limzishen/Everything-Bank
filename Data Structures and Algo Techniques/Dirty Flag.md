@@ -1,5 +1,5 @@
 If you need to delete multiple values in the an array, it can be very costly
-You just dirty flag the value if you dont want it anymore 
+You just dirty flag the value if you dont want it anymore, and skip flagged entries lazily when they reach the front (**lazy deletion**). Same trick as deleting from a heap.
 
 ```python
 from collections import defaultdict, deque
@@ -48,3 +48,6 @@ def solve(Product, Q, Demand):
 
     return ans
 ```
+
+# Related
+- [[Caching]] · [[Sliding Window]]

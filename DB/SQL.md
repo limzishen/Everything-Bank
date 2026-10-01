@@ -1,7 +1,10 @@
+---
+tags: [ai-edited]
+---
 what data to store and how much data to store 
 
 ## ERD to schema 
-## Overview 
+See [[ERD Cardinality]], [[Relationship Exception]], [[DDL]].
 
 ## Features 
 - Tabular Data Model 
@@ -12,9 +15,9 @@ what data to store and how much data to store
 - Relational 
 
 ## Query Time Complexity
-- O(1) time look up for primary 
-- O(log N) look up for indexed column
-- O(N) look up for non indexed column 
+- O(log N) look up by primary key (it's a B+ tree index; O(1) only with a hash index)
+- O(log N) look up for indexed column ([[DB indexing]])
+- O(N) look up for non indexed column (full scan)
 
 
 ## Optimisation 
@@ -24,3 +27,6 @@ what data to store and how much data to store
 - Vertical scaling (improve servers)
 - Replications (Dupe the db & reduce latency issue)
 -  [[Read Heavy vs Write Heavy]]
+
+# Related
+- [[SQL Commands]] · [[Acid]] · [[Optimise Query]] · [[Stored Procedure and Triggers]] · [[Data Normalisation Forms]] · [[Redis]]

@@ -34,14 +34,14 @@ Sequential algorithm → **decompose** into tasks (programmer) → **schedule** 
 
 ### Process vs thread
 
-|  | Process | Thread |
-| --- | --- | --- |
-| Address space | Own (exclusive) | Shared with its process |
-| Private state | PC, registers, stack, heap, globals, OS resources (files, sockets) | PC, SP, registers, own runtime stack only |
-| Communication | Explicit (IPC through the OS: shared memory, message passing, pipes, signals) | Implicit through shared memory |
-| Creation cost | High: syscall, allocate and copy data structures | Lower: no address-space copy |
-| Context switch | Costly | Cheaper |
-| Failure isolation | Strong | None: one bad thread can corrupt all |
+|                   | Process                                                                       | Thread                                                    |
+| ----------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Address space     | Own (exclusive)                                                               | Shared with its process                                   |
+| Private state     | PC, registers, stack, heap, globals, OS resources (files, sockets)            | PC, SP (stack pointer), registers, own runtime stack only |
+| Communication     | Explicit (IPC through the OS: shared memory, message passing, pipes, signals) | Implicit through shared memory                            |
+| Creation cost     | High: syscall, allocate and copy data structures                              | Lower: no address-space copy                              |
+| Context switch    | Costly                                                                        | Cheaper                                                   |
+| Failure isolation | Strong                                                                        | None: one bad thread can corrupt all                      |
 
 Memory layout of a process: text, data (globals), heap, stack. With threads, text/data/heap are shared and each thread gets its own stack. A thread's stack exists only while the thread is active.
 
@@ -56,12 +56,18 @@ Memory layout of a process: text, data (globals), heap, stack. With threads, tex
 
 ### Threads
 
-| Type | Who manages | Pros | Cons |
-| --- | --- | --- | --- |
-| User-level | Thread library; OS unaware | Fast switching | No parallelism across cores; one blocking I/O call blocks the whole process |
-| Kernel | OS | True multicore use; one thread blocking doesn't block others | Heavier operations |
+| Type       | Who manages                | Pros                                                         | Cons                                                                        |
+| ---------- | -------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| User-level | Thread library; OS unaware | Fast switching                                               | No parallelism across cores; one blocking I/O call blocks the whole process |
+| Kernel     | OS                         | True multicore use; one thread blocking doesn't block others | Heavier operations                                                          |
 
-Mappings: **many-to-one** (all user threads on one kernel entity, library schedules), **one-to-one** (each user thread has a kernel thread, OS schedules), **many-to-many** (library assigns user threads to a pool of kernel threads; the mapping can change over time).
+Mappings: 
+**many-to-one** (all user threads on one kernel entity, library schedules)
+Many user threads map to a 
+
+**one-to-one** (each user thread has a kernel thread, OS schedules)
+
+**many-to-many** (library assigns user threads to a pool of kernel threads; the mapping can change over time).
 
 POSIX pattern: `pthread_create` to start, `pthread_join` to wait. Without the join, `main` may `exit` and kill all threads. Choose the thread count to match application parallelism and available cores, but not so many that creation/management overhead dominates.
 
@@ -124,7 +130,9 @@ items.signal()              event.process()
 Any number of readers may be inside together; a writer needs exclusive access.
 
 ```text
-readers = 0; mutex = Semaphore(1); roomEmpty = Semaphore(1)
+readers = 0; 
+mutex = Semaphore(1); 
+roomEmpty = Semaphore(1)
 
 Writer:                    Reader:
 roomEmpty.wait()           mutex.wait()
@@ -335,12 +343,12 @@ Goals differ by audience: users want low **response time** (wall-clock time from
 
 Response time = user CPU time + system CPU time (OS routines) + waiting time (I/O, and other programs under time sharing). Waiting depends on system load, system time on the OS.
 
-```latex
-T_{user}(A) = N_{cycle}(A) \times T_{cycle}, \qquad T_{cycle} = \frac{1}{\text{clock rate}}
-```
 
-```latex
-N_{cycle}(A) = \sum_{i=1}^{n} n_i(A) \times CPI_i \quad\Rightarrow\quad T_{user}(A) = N_{instr}(A) \times CPI(A) \times T_{cycle}
+$T_{user}(A) = N_{cycle}(A) \times T_{cycle}, \qquad T_{cycle} = \frac{1}{\text{clock rate}}$
+
+
+
+$ N_{cycle}(A) = \sum_{i=1}^{n} n_i(A) \times CPI_i \quad\Rightarrow\quad T_{user}(A) = N_{instr}(A) \times CPI(A) \times T_{cycle}
 ```
 
 - `N_instr` depends on the instruction set architecture and the compiler; `CPI` depends on CPU internals, memory system and compiler; `T_cycle` on the hardware.
@@ -408,7 +416,7 @@ Observation: f is **not constant**; as n grows, the serial part (initialization 
 Slide derivation: sequential part takes constant time τ\_f; parallelizable part takes τ\_v(n, p) = (T\*(n) - τ\_f)/p assuming perfect parallelization with no overhead.
 
 ```latex
-S_p(n) = \frac{\tau_f + \tau_v(n,1)}{\tau_f + \tau_v(n,p)} = \frac{\frac{\tau_f}{T^*(n)-\tau_f} + 1}{\frac{\tau_f}{T^*(n)-\tau_f} + \frac{1}{p}} \;\xrightarrow{\,n\to\infty\,}\; p \quad \text{if } T^*(n) \text{ grows strictly monotonically}
+$S_p(n) = \frac{\tau_f + \tau_v(n,1)}{\tau_f + \tau_v(n,p)} = \frac{\frac{\tau_f}{T^*(n)-\tau_f} + 1}{\frac{\tau_f}{T^*(n)-\tau_f} + \frac{1}{p}} \;\xrightarrow{\,n\to\infty\,}\;$ p \quad \text{if } T^*(n) \text{ grows strictly monotonically}
 ```
 
 So `lim f(n) = 0` gives `S_p → p`: Amdahl's cap is circumvented for large problems. The slide's closed form is `S_p = p / (1 + (p-1) f(n))`.
@@ -422,9 +430,7 @@ So `lim f(n) = 0` gives `S_p → p`: Amdahl's cap is circumvented for large prob
 
 ### Arithmetic intensity, contention, locality
 
-```latex
-\text{Arithmetic intensity} = \frac{\text{amount of computation (e.g. instructions)}}{\text{amount of communication (e.g. bytes)}}
-```
+$\text{Arithmetic intensity} = \frac{\text{amount of computation (e.g. instructions)}}{\text{amount of communication (e.g. bytes)}}$ 
 
 The reciprocal is the communication-to-computation ratio (the average bandwidth demand). Modern processors have far more compute than bandwidth, so you need **high** arithmetic intensity to keep cores busy. The memory-throughput slide shows loads stalling the pipeline and the memory bus saturating: at steady state core utilization is set by instruction throughput and memory throughput.
 

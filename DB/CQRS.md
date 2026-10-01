@@ -14,4 +14,7 @@ On read side:
 - Optimised schema
 	- Read will use a schema optimised for reading 
 	- Write will have a schema optimised for security and reliability 
-- simpler query 
+- simpler query
+
+# Related
+- [[Read Heavy vs Write Heavy]] · [[Optimise Query]]

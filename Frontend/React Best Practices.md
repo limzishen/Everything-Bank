@@ -12,7 +12,7 @@
 
 # State Management 
 1. Try and use reducers [[React-Redux]]
-2. Try and use hooks instead of render props 
+2. Try and use [[React Hooks|hooks]] instead of render props 
 
 # Application Structure 
 
@@ -25,6 +25,8 @@
 # Performance 
 1. Dont optimise prematurely 
 2. Be wary of the bundle size 
-3. Reduce the amount of rerenders 
-4. 
+3. Reduce the amount of rerenders (`React.memo`, `useMemo`, `useCallback`, stable keys) 
+4. Code-split routes with `React.lazy` + `Suspense`
 
+# Related
+- [[React]]

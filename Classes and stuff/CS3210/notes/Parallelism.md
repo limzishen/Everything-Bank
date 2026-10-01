@@ -45,3 +45,5 @@ work on things like AVX intrinsics vector program
 Multiple instruction single data 
 ![[Pasted image 20260909164321.png]]
 
+# Related
+- [[midterm notes]] · [[Thread]] · [[CPU Cache]] · [[MESI protocol]] · [[Optimising communication and parallelism for large deep learning]]

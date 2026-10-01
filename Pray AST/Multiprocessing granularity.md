@@ -19,3 +19,6 @@ These control the token differently — worth having in the mix:
 7. Count-based quantum. Pick any event class above, then only actually return the token every N such events (N=1 is thread-step, N=∞ is run-until-block). A single knob trading IPC for interleaving resolution. Must count events, never wall-clock time — a time-slice quantum would destroy deterministic replay.
 
 8. Preemption-bounded (PCT-style). Don't fix where checkpoints happen — instead run freely but let the coordinator inject at most c context switches, placed at chosen points, bounding the schedule space by number of preemptions rather than granularity. This isn't hypothetical: pray's existing PCT scheduler already does exactly this at the thread level, so it could be lifted to the process level almost directly — arguably the most natural fit given the codebase.
+
+# Related
+- [[Pray AST]] · [[Pray Notes]] · [[PCT (probabilistic concurrency testing)]]

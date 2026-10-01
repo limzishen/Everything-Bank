@@ -29,4 +29,7 @@ You can form any key from the given relation, make your own
 
 
 # Foreign key 
-A subset of attributes of relation A if it refers to a primary key in B 
+A subset of attributes of relation A if it refers to a primary key in B
+
+# Related
+- [[Functional Dependency]] · [[DDL]] · [[ERD Cardinality]] · [[Data Normalisation Forms]]

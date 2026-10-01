@@ -47,3 +47,6 @@ return (
 ```
 <Link to="/blogs">View Blog Posts</Link>
 ```
+
+# Related
+- [[React]]

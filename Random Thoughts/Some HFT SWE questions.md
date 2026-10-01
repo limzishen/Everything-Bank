@@ -158,6 +158,9 @@ Extra credit: "describe what happens between the time you type ls <enter> on you
 One useful resource, although dated, is Samuel et al.'s *Advanced Linux Programming* https://www.oreilly.com/library/view/advanced-linux-programming/0735710430/
 Plan at least to familiarize yourself with the core concepts there.
 
-### Compilers
+### Compiler
 Unless you interview as a compiler specialist, you are not going to get deep questions on the algorithms used in the various stages of a compiler.
 Still, understand the basic mechanism of software construction as it pertains to a C++: translation units, tokenization, parsing, ASTs, intermediate representations, instruction selection, optimization stages, static linking, dynamic linking, static and dynamic libraries, OS "interpreter", etc.
+
+# Related
+- [[HFT SWE resources]] · [[Knowledge Gaps]] · [[CPU Cache]] · [[Compare and Swap (CAS)]]

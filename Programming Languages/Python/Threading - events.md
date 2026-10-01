@@ -1,16 +1,19 @@
+---
+tags: [ai-edited]
+---
 # Pre no-GIL 
 With the global interpreter lock, only one part of the python bytecode can run at once
 So multiple cpu threads cant run all together all at once 
 
 With GIL, CPU heavy bound task is slow but efficient for IO bound task to free up the cpu process to run something else 
-Because of no GIL, multiple cpu threads can run in parallel unless you use multiprocessing (but multiprocessing cant share memory across threads)
+Because of the GIL, multiple CPU threads can't run Python bytecode in parallel unless you use multiprocessing (but multiprocessing can't share memory across processes by default). See [[GIL]].
 
 # no GIL 
 allow for parallel of data sharing and multiple threads running at once with shared memory 
 
 # Lock 
-threading.lock() prevents other thread from running
-The lock primitive does not belong to any thread 
+`threading.Lock()` prevents other threads from entering the critical section (it doesn't stop them running other code)
+The lock primitive does not belong to any thread: any thread can release it. `RLock` *is* owned and re-entrant. Compare with a mutex vs [[Semaphore]] in [[Locks]].
 
 # Events 
 Event is used like a signal to communicate across threads 
@@ -62,3 +65,6 @@ for i in range(2):
     gate_open.clear()   # Flag becomes False -> Next wait() will block
     
 ```
+
+# Related
+- [[GIL]] · [[Python Multiprocessing vs Multithreading]] · [[Producer Consumer Problem]] · [[AsyncIO]]

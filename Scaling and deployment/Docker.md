@@ -1,11 +1,14 @@
+---
+tags: [ai-edited]
+---
 # Docker Image 
-A standalone executable file used to create a Docker container 
+A read-only template (stack of filesystem layers + metadata such as entrypoint and env) used to create a Docker container 
 Docker images are immutable, sharable and portable 
 Able to deploy the same image in multiple location
 Read only
 # Docker Container 
 The runtime environment with all the necessary components like code and dependencies 
-Mimics the functionalities of different OSs but limited to it only. Does not have kernel capabilities like hardware control and 
+A container is just a **process** isolated with Linux namespaces (pid, net, mount, uts, ipc, user) and resource-limited with cgroups. It **shares the host kernel**, unlike a VM. That is why a Linux container needs a Linux kernel (Docker Desktop on macOS runs a hidden VM).
 
 # Docker base image 
 Foundation for your docker image 
@@ -77,3 +80,6 @@ Set up the bridge through docker-compose files
 # Docker Compose 
 The docker compose yml files allow you to define and manage multi-service application 
 It handles networking, volumes, environment variables, and service dependencies
+
+# Related
+- [[Kubernetes]] · [[Network Namespaces]] · [[Process]] · [[EC2]]

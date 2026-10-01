@@ -1,3 +1,6 @@
+---
+tags: [ai-edited]
+---
 In Cpython/symtable.c 
 
 Name mangling is implemented to prevent accidental naming conflict in classes during inheritance. Cpython automatically renames the variable internally to avoid clashes
@@ -31,7 +34,7 @@ print(s._Student__name)
 
 
 ## Safe Method Overriding 
-Prevents the parent methoc
+Prevents the parent method from being accidentally overridden. `Parent.__init__` calls `self.__show`, which is mangled to `self._Parent__show`, so it always resolves to the parent's version even when `Child` defines `show`.
 ```Python 
 class Parent:
     def __init__(self):
@@ -54,6 +57,7 @@ obj.show()
 # Child class
 ```
 
+Without mangling, the child override hijacks the parent's internal call (output: `Child class` twice):
 ```Python 
 class Parent:
     def __init__(self):
@@ -70,3 +74,6 @@ class Child(Parent):
 obj = Child()
 obj.show()
 ```
+
+# Related
+- [[Python Execution Model]]

@@ -1,5 +1,5 @@
 ## Read Heavy 
-- [[Caching | Cache]]
+- [[Caching | Cache]] ([[Redis]])
 - Database replication (reduce latency when reading)
 - Content Delivery Network (cache content geographically closer to user)
 - Load balancing (Distribute incoming rea request evenly across servers)
@@ -13,7 +13,10 @@
 	- Optimise Database Schema 
 - Write Batching and Buffering
 	- Batch multiple write operations 
-	- [[Buffer]]
+	- Buffer writes in memory / a queue ([[SQS (Simple Queue System)|SQS]], Kafka) and flush in bulk
 - [[Asynchronous Query]]
 - [[CQRS | Command Query Responsibility Segregation]]
-	- Separate read and write 
+	- Separate read and write
+
+# Related
+- [[SQL]] · [[DB indexing]]

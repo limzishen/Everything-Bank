@@ -40,4 +40,7 @@ max number of possible shards on the db
 Probability of storing specific information on a particular shard 
 
 ### Monotonic change
-As the input grows, how would your each db shard grows 
+As the input grows, how would your each db shard grows
+
+# Related
+- [[SQL]] · [[Read Heavy vs Write Heavy]] · [[microservice vs monolith]]

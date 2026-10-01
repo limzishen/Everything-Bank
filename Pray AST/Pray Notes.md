@@ -32,3 +32,6 @@ True memory sharing is opt-in, and all of it ultimately rests on **`mmap`**: the
 - **`mmap` module directly** — map a file (or anonymous region) shared between processes; you get a raw byte buffer and do your own layout/locking.
 - **`Value` / `Array`** — fixed C types (`ctypes`) allocated in an anonymous mmap region, with an optional built-in lock; compound updates like `v.value += 1` still race without it.
 - **`multiprocessing.shared_memory.SharedMemory`** — named mmap-backed block (commonly wrapped by numpy); no built-in locking, must be explicitly unlinked.
+
+# Related
+- [[Pray AST]] · [[Multiprocessing granularity]] · [[Fork]] · [[Python Multiprocessing vs Multithreading]] · [[GIL]]

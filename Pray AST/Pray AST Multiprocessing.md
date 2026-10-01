@@ -20,4 +20,7 @@ Added active scheduling state for thread scheduling for when the processes are b
 updated the change point allocation from scheduler to collection to allow the allocation to be shared between processes 
 
 ## Updated Profiling scheduler 
-Separated the thread profiling to a separate function to allow for processes profiling to also call the thread profiling 
+Separated the thread profiling to a separate function to allow for processes profiling to also call the thread profiling
+
+# Related
+- [[Pray AST]] · [[Pray Notes]] · [[Multiprocessing granularity]] · [[PCT (probabilistic concurrency testing)]] · [[test plans]]

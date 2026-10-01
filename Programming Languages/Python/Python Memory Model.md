@@ -1,3 +1,6 @@
+---
+tags: [ai-edited]
+---
 Everything in python is a heap allocated object (PyObject)
 
 # PyObject 
@@ -41,4 +44,7 @@ A garbage collector that run periodically and focus on objects that are containe
 
 **Generation 2: _Long lived survivors that survived multiple rounds._**
 
+Refcounting alone can't free cycles (`a.b = a`). The cyclic GC finds containers whose references come only from inside the candidate set. It's the same generational idea as [[Java Garbage Collection|the JVM]]. Refcount updates are the reason the [[GIL]] exists.
 
+# Related
+- [[Python Execution Model]] · [[GIL]] · [[Memory]]

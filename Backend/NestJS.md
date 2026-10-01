@@ -36,3 +36,6 @@ class UsersService {
 }
 ```
 The class _declares_ what it needs but doesn't build it. Something else builds it and passes it in through the constructor
+
+# Related
+- [[NodeJS]]

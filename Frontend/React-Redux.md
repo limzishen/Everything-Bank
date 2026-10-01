@@ -15,3 +15,6 @@ Complicated state logic
 3. Sends the action event into Store 
 4. Store update itself with the new state 
 5. UI is updated with the new state
+
+# Related
+- [[React]] · [[React Hooks]]

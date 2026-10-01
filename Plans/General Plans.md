@@ -30,4 +30,7 @@
 
 # DSA 
 1. Revise 2040s and 3230 stuff 
-2. Leetcode 
+2. Leetcode
+
+# Related
+- [[Detailed Plans]] · [[Knowledge Gaps]]

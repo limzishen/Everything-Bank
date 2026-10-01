@@ -20,3 +20,6 @@ The percentage of code coverage is how many lines of code is ran in the test cas
 Arrange - setup up any classes 
 Act - run it 
 Assert - check if output should be accepted
+
+# Related
+- [[Testing]]

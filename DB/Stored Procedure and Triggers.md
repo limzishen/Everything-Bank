@@ -1,3 +1,6 @@
+---
+tags: [ai-edited]
+---
 # Stored Procedures and Functions
 
 Functions in PL/pgSQL allow you to encapsulate logic, accept parameters, and return various data types.
@@ -120,3 +123,12 @@ Inside a trigger function, you have access to the state of the row before (`OLD`
 - **When to use:** These are primarily used when working with **Views** or CTEs (Common Table Expressions).
     
 - **Why:** You have to use `INSTEAD OF` triggers on views because standard views are generally read-only. The trigger intercepts the insert/update/delete command and runs your custom logic _instead of_ trying to directly modify the underlying view.
+
+# Why use a trigger instead of CHECK
+(merged from the old `Trigger` note)
+- `CHECK` constraints are meant to be **stateless**: they may only look at the current row.
+- A `CHECK` that calls a user-defined function querying *other* rows/tables gives unpredictable results. It isn't re-evaluated when those other rows change, and behaviour under concurrency is undefined.
+- Cross-row / cross-table rules belong in a (constraint) trigger, often `DEFERRABLE INITIALLY DEFERRED` so they're checked at commit.
+
+# Related
+- [[SQL]] · [[Acid]] · [[DDL]]

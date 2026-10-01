@@ -45,3 +45,6 @@ Auto update lock file
 **Info & Maintenance**
 - `uv pip list` — list installed packages
 - `uv cache clean` — clear the cache
+
+# Related
+- [[Common stuff]] · [[Docker]]

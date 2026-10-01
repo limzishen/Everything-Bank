@@ -46,3 +46,6 @@ Using the company name as a partial key allows for multiple company to have the 
 
 ![[Pasted image 20260301115026.png]]
 ![[Pasted image 20260301115108.png]]
+
+# Related
+- [[ERD Cardinality]] · [[DDL]]

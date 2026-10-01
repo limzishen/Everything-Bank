@@ -16,3 +16,6 @@ struct Entry {
 	variant<Node∗,int> v;
 };
 ```
+
+# Related
+- [[Classes]]
