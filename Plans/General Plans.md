@@ -1,4 +1,4 @@
-# System Design 
+ .  System Design 
 1. Network (revise on 2105 stuff gonna do it anyways)
 2. [[SQL | Database]] * 
 3. High level design 
