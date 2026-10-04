@@ -8,23 +8,23 @@ Spend most of your time on synchronization patterns, Amdahl vs Gustafson calcula
 
 Tier 1 is where you can be asked to compute or derive something; Tier 2 needs precise definitions and comparisons; Tier 3 is recall.
 
-| Tier | Topic | Lecture | What "in depth" means here |
-| --- | --- | --- | --- |
-| 1 | Semaphore solutions (producer-consumer, readers-writers, lightswitch, turnstile) | L02 | Trace interleavings; explain why a variant deadlocks or starves; write them from memory |
-| 1 | Race, data race, critical section, deadlock (4 conditions), livelock, starvation | L02 | Give a minimal example of each and distinguish them precisely |
-| 1 | Lock implementation: why naive spinlock fails, test-and-set | L02 | Explain the atomicity argument; spinlock vs mutex trade-off |
-| 1 | Amdahl, Gustafson, speedup, efficiency, cost-optimality | L05 | Derive both, compute numbers, state assumptions and when each applies |
-| 1 | Foster's methodology, task dependence graph, degree of concurrency | L04 | Compute critical path and concurrency; count communications for a grid decomposition |
-| 1 | CUDA execution model: grid/block/warp, divergence, occupancy | L06 | Pick and justify a launch configuration; compute occupancy from resource limits |
-| 1 | CUDA memory: coalescing, shared memory banks, host-device transfer | L06 | Count transactions for an access pattern; spot bank conflicts |
-| 2 | CPU time equation, AMAT (multi-level), MIPS/MFLOPS flaws | L05 | Plug-in calculations; explain why MIPS is misleading |
-| 2 | Flynn's taxonomy; UMA/NUMA/ccNUMA/COMA; distributed vs shared memory | L03 | Compare with trade-offs; map programming model to hardware |
-| 2 | Cache coherence problem; spatial/temporal locality; false sharing and padding | L03, L05 | Walk the stale-read scenario; fix a layout with padding |
-| 2 | Parallel patterns (fork-join, parbegin-parend, SPMD, master-worker, task pool, pipeline) | L04 | Pick the pattern for a scenario and justify it |
-| 2 | Data vs task parallelism; shared address space vs message passing | L04 | Decompose the same loop both ways |
-| 3 | Bit-level, ILP (pipeline, superscalar, SIMD), SMT, multicore designs | L03 | Definitions and examples |
-| 3 | Process vs thread, user vs kernel threads, thread mappings, fork/exec | L02 | Definitions and trade-offs |
-| 3 | GPU history, compute capability, compilation (PTX, SASS) | L06 | Recall only |
+| Tier | Topic                                                                                    | Lecture  | What "in depth" means here                                                              |
+| ---- | ---------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------- |
+| 1    | Semaphore solutions (producer-consumer, readers-writers, lightswitch, turnstile)         | L02      | Trace interleavings; explain why a variant deadlocks or starves; write them from memory |
+| 1    | Race, data race, critical section, deadlock (4 conditions), livelock, starvation         | L02      | Give a minimal example of each and distinguish them precisely                           |
+| 1    | Lock implementation: why naive spinlock fails, test-and-set                              | L02      | Explain the atomicity argument; spinlock vs mutex trade-off                             |
+| 1    | Amdahl, Gustafson, speedup, efficiency, cost-optimality                                  | L05      | Derive both, compute numbers, state assumptions and when each applies                   |
+| 1    | Foster's methodology, task dependence graph, degree of concurrency                       | L04      | Compute critical path and concurrency; count communications for a grid decomposition    |
+| 1    | CUDA execution model: grid/block/warp, divergence, occupancy                             | L06      | Pick and justify a launch configuration; compute occupancy from resource limits         |
+| 1    | CUDA memory: coalescing, shared memory banks, host-device transfer                       | L06      | Count transactions for an access pattern; spot bank conflicts                           |
+| 2    | CPU time equation, AMAT (multi-level), MIPS/MFLOPS flaws                                 | L05      | Plug-in calculations; explain why MIPS is misleading                                    |
+| 2    | Flynn's taxonomy; UMA/NUMA/ccNUMA/COMA; distributed vs shared memory                     | L03      | Compare with trade-offs; map programming model to hardware                              |
+| 2    | Cache coherence problem; spatial/temporal locality; false sharing and padding            | L03, L05 | Walk the stale-read scenario; fix a layout with padding                                 |
+| 2    | Parallel patterns (fork-join, parbegin-parend, SPMD, master-worker, task pool, pipeline) | L04      | Pick the pattern for a scenario and justify it                                          |
+| 2    | Data vs task parallelism; shared address space vs message passing                        | L04      | Decompose the same loop both ways                                                       |
+| 3    | Bit-level, ILP (pipeline, superscalar, SIMD), SMT, multicore designs                     | L03      | Definitions and examples                                                                |
+| 3    | Process vs thread, user vs kernel threads, thread mappings, fork/exec                    | L02      | Definitions and trade-offs                                                              |
+| 3    | GPU history, compute capability, compilation (PTX, SASS)                                 | L06      | Recall only                                                                             |
 
 ## L02 Processes, threads, synchronization
 
@@ -63,21 +63,17 @@ Memory layout of a process: text, data (globals), heap, stack. With threads, tex
 
 Mappings: 
 **many-to-one** (all user threads on one kernel entity, library schedules)
-Many user threads map to a 
+Many user threads map to a language library scheduler, each library scheduler maps to a kernel thread. This can achieve concurrency but not parallelism. (eg. Coroutines)
 
 **one-to-one** (each user thread has a kernel thread, OS schedules)
+Each user thread is mapped to a kernel thread. OS is able to preemptively schedule the threads. 
+(eg. std::thread)
 
 **many-to-many** (library assigns user threads to a pool of kernel threads; the mapping can change over time).
 
-POSIX pattern: `pthread_create` to start, `pthread_join` to wait. Without the join, `main` may `exit` and kill all threads. Choose the thread count to match application parallelism and available cores, but not so many that creation/management overhead dominates.
+![[Pasted image 20261001174551.png]]
 
-### Why synchronization is needed
-
-Threads interleave arbitrarily and at different speeds; scheduling is outside program control. Synchronization restricts the allowed interleavings.
-
-Bank example: `withdraw` does read balance, subtract, write balance. Two threads each withdrawing $100 from $1000 can both read 1000 and both write 900: one withdrawal is lost.
-
-**Definitions to keep distinct:**
+### Synchronisation issues 
 
 - **Race condition**: outcome depends on timing/interleaving of concurrent execution.
 - **Data race** (a type of race condition): two concurrent accesses to the same location, no protection, at least one is a write.
@@ -95,14 +91,11 @@ Bank example: `withdraw` does read balance, subtract, write balance. Two threads
 
 ### Deadlock, starvation, livelock
 
-**Deadlock**: every process in a set waits for an event only another process in the set can cause. It occurs only if all four hold:
-
+**Deadlock**: Coffman Condition 
 1. **Mutual exclusion**: a resource is held non-sharably.
 2. **Hold and wait**: a process holds one resource while waiting for another.
 3. **No pre-emption**: resources can't be forcibly taken.
 4. **Circular wait**: P1 waits for P2, …, Pn waits for P1.
-
-Four responses: ignore it, **prevent** (break one of the four conditions), **avoid** (control allocation, e.g. refuse unsafe grants), **detect and recover** (find a cycle in the wait-for graph).
 
 **Starvation**: a process never makes progress because others keep getting the resource; a side effect of scheduling or lock fairness (high-priority always wins; one thread always wins the lock).
 
@@ -121,46 +114,24 @@ mutex.signal()              mutex.signal()
 items.signal()              event.process()
 ```
 
-- The **first version** signals `items` inside the mutex. Correct but slightly wasteful: a woken consumer immediately blocks on the mutex the producer still holds. Moving `items.signal()` outside the mutex (shown above) is the improvement.
-- **Broken version**: consumer does `mutex.wait()` **before** `items.wait()`. If the buffer is empty the consumer holds the mutex while sleeping on `items`; the producer can never get the mutex to add an item. **Deadlock** (hold and wait + circular dependency). Lesson: block on the counting semaphore first, take the mutex last and briefly.
+![[Pasted image 20261001202840.png]]
+- Signals `items` inside the mutex. Correct but slightly wasteful: due to multiple context switch. This is because the consumer might still have to wait for the mutex to unlock.  
+![[Pasted image 20261001203101.png]]
+- Unlocks the mutex first then signal the the Consumer, so the consumer does not have to wait for the mutex
+![[Pasted image 20261001203209.png]]
 - **Finite buffer**: add `spaces = Semaphore(buffer_size)`. Producer: `spaces.wait()` then mutex section then `items.signal()`. Consumer: `items.wait()`, mutex section, then `spaces.signal()`. Two counting semaphores track full and empty slots; the mutex protects the buffer structure.
 
 ### Readers-writers
 
 Any number of readers may be inside together; a writer needs exclusive access.
 
-```text
-readers = 0; 
-mutex = Semaphore(1); 
-roomEmpty = Semaphore(1)
+**Turnstile** (`Semaphore(1)`). A writer takes the turnstile and holds it while waiting for the room; readers pass through it briefly (`wait` then `signal`) before entering, so once a writer is waiting, new readers queue behind it. No-starve version:
 
-Writer:                    Reader:
-roomEmpty.wait()           mutex.wait()
-  # write                    readers += 1
-roomEmpty.signal()           if readers == 1: roomEmpty.wait()   # first in locks
-                           mutex.signal()
-                             # read
-                           mutex.wait()
-                             readers -= 1
-                             if readers == 0: roomEmpty.signal() # last out unlocks
-                           mutex.signal()
-```
-
-**Lightswitch** abstracts the reader pattern: first thread in turns the "light" on (waits on the semaphore), last out turns it off (signals it). Then readers call `readSwitch.lock(roomEmpty)` / `unlock(roomEmpty)`.
-
-**Problem: writers starve** while readers keep arriving. **Fix: turnstile** (`Semaphore(1)`). A writer takes the turnstile and holds it while waiting for the room; readers pass through it briefly (`wait` then `signal`) before entering, so once a writer is waiting, new readers queue behind it. No-starve version:
-
-```text
-Writer:                       Reader:
-turnstile.wait()              turnstile.wait()
-  roomEmpty.wait()            turnstile.signal()
-    # write                   readSwitch.lock(roomEmpty)
-  turnstile.signal()            # read
-  roomEmpty.signal()          readSwitch.unlock(roomEmpty)
-```
+![[Pasted image 20261001204630.png]]
 
 **Writer-priority** version uses two lightswitches (`writeSwitch` on `noReaders`, `readSwitch` on `noWriters`) plus a `noReaders` gate readers must pass first, so waiting writers block new readers entirely. Trade-off: readers can now starve.
-
+![[Pasted image 20261001210524.png]]
+Think of lightswitch as a lock where the last writer leaving get to unlock. noReaders is a lock that ensures no readers are able to enter. Once the lock is obtained by the writer, no readers are able to enter 
 ### Implementing locks
 
 1. Naive spinlock: `while (lock->held); lock->held = 1;`. **Broken**: two threads can both see `held == 0` before either sets it (a context switch between the test and the set). The lock implementation itself has a critical section: the recursion problem.
@@ -230,6 +201,9 @@ A GPU's streaming multiprocessors are a **variant**: within a group of threads i
 
 **Hybrid (distributed-shared)**: clusters of shared-memory nodes, the common supercomputer layout; the model L08 builds toward.
 
+### Cache contention 
+Multiple processes and thread fights for space and bandwidth in a shared cache. Alternatiely, multiple thread are trying to use the same cache line. 
+Able to fix this with padding to ensure the access are aligned 
 ### Cache coherence
 
 Problem: the same variable can sit in several caches. Slide scenario: memory holds `u = 5`; PU1 and PU3 both read it (cached `u = 5`); PU3 writes `u = 7` in its cache; PU1 (and PU2) then read `u` and see the stale **5**. Requirement: after a local update, other processors must not see the old value. Hardware enforces it with a **cache coherence protocol** (cache coherence is about a single location; **memory consistency** is about the ordering of accesses to different locations, and the slides only name it).
@@ -266,14 +240,12 @@ A loop is data-parallel only if iterations are independent. `a[i] = b[i-1] + c[i
 A **directed acyclic graph**: node = task (value = expected execution time), edge = dependency. Used to evaluate a decomposition.
 
 - **Critical path length**: longest weighted path = minimum possible completion time with unlimited processors.
-- **Degree of concurrency** = total work / critical path length: average parallelism available.
+- **Degree of concurrency** = total work / critical path length: average parallelism available. Maximum theoretical speedup. 
 
-Slide example (database query `Model=civic AND Year=2001 AND (Color=green OR white)`): four leaf lookups of 10 each, then combining tasks.
-
-| Decomposition | Total work | Critical path | Length | Degree of concurrency |
-| --- | --- | --- | --- | --- |
-| A | 63 | Task 4 → 6 → 7 (10 + 9 + 8) | 27 | 63 / 27 = 2.33 |
-| B | 64 | Task 1 → 5 → 6 → 7 (10 + 6 + 11 + 7) | 34 | 64 / 34 = 1.88 |
+| Decomposition | Total work | Critical path                        | Length | Degree of concurrency |
+| ------------- | ---------- | ------------------------------------ | ------ | --------------------- |
+| A             | 63         | Task 4 → 6 → 7 (10 + 9 + 8)          | 27     | 63 / 27 = 2.33        |
+| B             | 64         | Task 1 → 5 → 6 → 7 (10 + 6 + 11 + 7) | 34     | 64 / 34 = 1.88        |
 
 Decomposition A is better: shorter critical path, higher concurrency, even though total work is similar. Degree of concurrency is an upper bound on useful processors for that decomposition; extra processors beyond it sit idle.
 
@@ -287,7 +259,7 @@ Decomposition A is better: shorter critical path, higher concurrency, even thoug
 
 Any model can be implemented on any hardware: message passing on shared memory (send = copy into library buffers, receive = copy out); shared address space on distributed memory in software (page-fault handler issues network requests, writes send invalidations), but less efficiently.
 
-**Representation of parallelism** (how much the programmer must spell out): implicit (automatic parallelizing compilers, functional languages like Haskell) vs explicit (OpenMP: implicit scheduling; BSPLib: implicit communication but explicit mapping; MPI and Pthreads: explicit scheduling, mapping, communication and synchronization). Automatic parallelization struggles with pointers/indirect addressing, loops of unknown bounds, and opaque memory hierarchies, so mostly you do it yourself.
+**Representation of parallelism**: implicit (automatic parallelizing compilers, functional languages like Haskell) vs explicit (OpenMP: implicit scheduling; BSPLib: implicit communication but explicit mapping; MPI and Pthreads: explicit scheduling, mapping, communication and synchronization). Automatic parallelization struggles with pointers/indirect addressing, loops of unknown bounds, and opaque memory hierarchies, so mostly you do it yourself.
 
 ### Foster's design methodology (PCAM)
 
@@ -307,14 +279,13 @@ Sequential algorithm → **Partitioning** → **Communication** → **Agglomerat
 
 **3. Agglomeration**: merge tasks into larger ones; keep number of tasks ≥ number of cores. Goals: cut communication and task-creation cost, keep scalability, simplify programming. Rules: higher locality, task count still grows with problem size, suitable for target systems, code-change cost reasonable.
 
-*Granularity effect on an 8x8 grid* (slide numbers; each task counted with 4 neighbors, send and receive):
+**Examples of agglomeration:** Reduce dimensionality, 3-D decomposition, Divide and conquer, Tree algorithm (combine using partial ordering algorithm)
 
-| Partition | Tasks | Data transfers |
-| --- | --- | --- |
-| Fine: 1 point/task | 8 x 8 = 64 | 64 x 4 x 2 = 512 |
-| Coarse: 4x4 points/task | 2 x 2 = 4 | 4 x 4 x 2 = 32 |
-
-The underlying principle is **surface-to-volume ratio**: computation scales with the area of a block, communication with its perimeter, so bigger blocks have less communication per unit of work. Counter-pressure: too few tasks hurts load balance and hides parallelism.
+**Goal of agglomeration:** 
+- Increase locality of task 
+- The number of tasks scales with problem size 
+- The number of task is suitable for the target system 
+- Tradeoffs between agglomeration and code modifications 
 
 **4. Mapping**: assign tasks to cores. Conflicting goals: maximize utilization (spread tasks) vs minimize inter-processor communication (co-locate tasks that talk). Done by the OS on centralized multiprocessors, by the user on distributed-memory systems. Optimal mapping is **NP-hard**, so use heuristics; map neighboring tasks to cores that are directly connected in the topology. Rules: consider one-task-per-core and multiple-tasks-per-core designs; with dynamic allocation the allocator must not become a bottleneck; with static allocation use a task-to-core ratio of at least 10:1.
 
@@ -322,16 +293,16 @@ The underlying principle is **surface-to-volume ratio**: computation scales with
 
 A pattern gives a coordination structure for tasks; they are not mutually exclusive.
 
-| Pattern | Idea | Implementation / example | Watch out for |
-| --- | --- | --- | --- |
-| Fork-join | Task creates independent children that may join at different times; children can run the same or different code | Processes, threads; database query as nested forks (P1 = civic AND 2001, P2 = green OR white, then join) | Join waits for the slowest child |
-| Parbegin-parend | A construct creates a set of threads for a block of statements and waits for all at the end; all forks together, all joins together | OpenMP `#pragma omp parallel for` (matrix multiply with `shared(a,b,result) private(i,j,k)`) | Implicit barrier at the end; shared vs private variable declarations |
-| SIMD | Same instruction on all threads, in lockstep | SSE/AVX | Divergence |
-| SPMD | Same program on different data; threads may diverge by `if` or core speed | GPU programs, MPI programs | No implicit synchronization; add it explicitly |
-| Master-worker | Master initializes, assigns work, collects results, does I/O/timing; workers wait for instructions | MPI matrix multiply: rank 0 distributes `a` rows and `b`, workers compute `rows_per_worker = size / workers` rows | Master becomes a bottleneck |
-| Task pool | Fixed set of threads pull tasks from a shared pool; tasks can add tasks; done when pool empty and all threads idle | Java `Executors.newFixedThreadPool(5)` with 10 tasks | Pool access must be synchronized; overhead matters for fine-grained tasks. Good for irregular/adaptive work; thread-creation cost independent of task count |
-| Producer-consumer | Producers fill a shared buffer, consumers drain it | Java `synchronized` + `wait`/`notify` with `while` loops | Buffer full/empty handling; same semaphore logic as L02 |
-| Pipeline | Stream of data elements passes through stages T1..Tp; each stage receives, processes, sends | Stream/functional parallelism | Throughput limited by the slowest stage; needs many elements to fill the pipe |
+| Pattern           | Idea                                                                                                                                | Implementation / example                                                                                          | Watch out for                                                                                                                                               |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fork-join         | Task creates independent children that may join at different times; children can run the same or different code                     | Processes, threads; database query as nested forks (P1 = civic AND 2001, P2 = green OR white, then join)          | Join waits for the slowest child                                                                                                                            |
+| Parbegin-parend   | A construct creates a set of threads for a block of statements and waits for all at the end; all forks together, all joins together | OpenMP `#pragma omp parallel for` (matrix multiply with `shared(a,b,result) private(i,j,k)`)                      | Implicit barrier at the end; shared vs private variable declarations                                                                                        |
+| SIMD              | Same instruction on all threads, in lockstep                                                                                        | SSE/AVX                                                                                                           | Divergence                                                                                                                                                  |
+| SPMD              | Same program on different data; threads may diverge by `if` or core speed                                                           | GPU programs, MPI programs                                                                                        | No implicit synchronization; add it explicitly                                                                                                              |
+| Master-worker     | Master initializes, assigns work, collects results, does I/O/timing; workers wait for instructions                                  | MPI matrix multiply: rank 0 distributes `a` rows and `b`, workers compute `rows_per_worker = size / workers` rows | Master becomes a bottleneck                                                                                                                                 |
+| Task pool         | Fixed set of threads pull tasks from a shared pool; tasks can add tasks; done when pool empty and all threads idle                  | Java `Executors.newFixedThreadPool(5)` with 10 tasks                                                              | Pool access must be synchronized; overhead matters for fine-grained tasks. Good for irregular/adaptive work; thread-creation cost independent of task count |
+| Producer-consumer | Producers fill a shared buffer, consumers drain it                                                                                  | Java `synchronized` + `wait`/`notify` with `while` loops                                                          | Buffer full/empty handling; same semaphore logic as L02                                                                                                     |
+| Pipeline          | Stream of data elements passes through stages T1..Tp; each stage receives, processes, sends                                         | Stream/functional parallelism                                                                                     | Throughput limited by the slowest stage; needs many elements to fill the pipe                                                                               |
 
 Subtle points: in the producer-consumer code, `wait` sits in a `while`, not an `if`, because a woken thread must recheck the condition. Fork-join differs from parbegin-parend in that forks and joins may be staggered rather than all at once.
 
@@ -341,44 +312,36 @@ Goals differ by audience: users want low **response time** (wall-clock time from
 
 ### Sequential response time
 
-Response time = user CPU time + system CPU time (OS routines) + waiting time (I/O, and other programs under time sharing). Waiting depends on system load, system time on the OS.
+Response time/wall clock time = user CPU time + system CPU time (OS routines) + waiting time (I/O, and other programs under time sharing). Waiting depends on system load, system time on the OS.
 
 
 $T_{user}(A) = N_{cycle}(A) \times T_{cycle}, \qquad T_{cycle} = \frac{1}{\text{clock rate}}$
 
+![[Pasted image 20261003183317.png]]
+![[Pasted image 20261003223544.png]]
 
+![[Pasted image 20261004132859.png]]
 
-$ N_{cycle}(A) = \sum_{i=1}^{n} n_i(A) \times CPI_i \quad\Rightarrow\quad T_{user}(A) = N_{instr}(A) \times CPI(A) \times T_{cycle}
-```
+CPI(A) is the average cycle per instruction for program A for the machine 
+N<sub>instr</sub>(A) is the number of instruction for program A running on the machine
 
-- `N_instr` depends on the instruction set architecture and the compiler; `CPI` depends on CPU internals, memory system and compiler; `T_cycle` on the hardware.
-- Poll question on the slides (why is the i7 faster than the Xeon on sequential code?): the answer is **clock frequency** (3+ GHz vs 2.2 GHz, so shorter cycle time), not core count or logical cores. Higher frequency means *shorter* time per instruction.
-
+### Memory access workflow
+![[Pasted image 20261004133255.png]]
 **Adding memory access time** (one-level cache):
+![[Pasted image 20261004134742.png]]
 
-```latex
-T_{user}(A) = \big(N_{instr}(A) \times CPI(A) + N_{rw\_op}(A) \times R_{miss}(A) \times N_{miss\_cycles}\big) \times T_{cycle}
-```
+![[Pasted image 20261004134800.png]]
+![[Pasted image 20261004134816.png]]
+Similar for the N<sub>write_cycle</sub>(A) 
 
-`N_rw_op` = number of reads and writes, `R_miss` = miss rate, `N_miss_cycles` = extra cycles to load a cache line. Cache terms: LLC = last-level cache, cache line/block = unit of memory held in cache, mapping = how a block is stored and located. Load: check cache; hit = deliver using the offset; miss = fetch block, allocate a line, load. Store: hit/miss behavior depends on write policy (write-back vs write-through) and miss policy (write-allocate vs write-around).
-
-**Average memory access time**, applied recursively for multi-level caches and virtual memory:
-
-```latex
-T_{read\_access} = T_{read\_hit} + R_{read\_miss} \times T_{read\_miss}
-```
-
-```latex
-T^{L1}_{read\_miss} = T^{L2}_{read\_hit} + R^{L2}_{read\_miss} \times T^{L2}_{read\_miss}, \qquad R_{global} = R^{L1}_{read\_miss} \times R^{L2}_{read\_miss}
-```
-
-`T_read_hit` is the time to access the cache regardless of hit or miss (extra time is charged to the miss term). The L2 miss rate here is the **local** rate (misses per L2 access); the global rate multiplies the two.
-
+![[Pasted image 20261004135006.png]]
+![[Pasted image 20261004135351.png]]
+![[Pasted image 20261004135531.png]]
 **Throughput measures and their flaws**
 
-```latex
-MIPS(A) = \frac{N_{instr}(A)}{T_{user}(A) \times 10^6} = \frac{\text{clock rate}}{CPI(A) \times 10^6}, \qquad MFLOPS(A) = \frac{N_{fl\_ops}(A)}{T_{user}(A) \times 10^6}
-```
+
+$MIPS(A) = \frac{N_{instr}(A)}{T_{user}(A) \times 10^6} = \frac{\text{clock rate}}{CPI(A) \times 10^6}, \qquad MFLOPS(A) = \frac{N_{fl\_ops}(A)}{T_{user}(A) \times 10^6}$
+
 
 - **MIPS** counts only instruction count, ignores what each instruction does, and is easy to inflate (a compiler or ISA that emits more, simpler instructions raises MIPS while the program gets slower). Hence "meaningless indicator of performance".
 - **MFLOPS** doesn't distinguish cheap from expensive floating-point ops; still used to rank the Top500; only meaningful when the goal is maximizing FLOP throughput.
@@ -386,13 +349,16 @@ MIPS(A) = \frac{N_{instr}(A)}{T_{user}(A) \times 10^6} = \frac{\text{clock rate}
 ### Parallel metrics
 
 `T_p(n)` = time from start to end of the parallel program on p PUs, problem size n. It includes local computation, data exchange, synchronization, and waiting (unequal load, waiting for shared structures).
+#### Speedup and cost 
 
-```latex
-S_p(n) = \frac{T_{best\_seq}(n)}{T_p(n)}, \qquad C_p(n) = p \times T_p(n), \qquad E_p(n) = \frac{T_{best\_seq}(n)}{C_p(n)} = \frac{S_p(n)}{p}
-```
+$S_p(n) = \frac{T_{best\_seq}(n)}{T_p(n)}$
 
 - Theoretically `S_p ≤ p`. **Superlinear speedup** (`S_p > p`) happens in practice, e.g. each core's working set now fits in cache, or one thread's loads warm a shared L3 for another.
+
+$C_p(n) = p \times T_p(n)$
 - **Cost** = processor-time product = total work including idle time. A parallel program is **cost-optimal** if its cost equals the sequential time asymptotically (efficiency constant, ideally 1).
+
+$E_p(n) = \frac{T_{best\_seq}(n)}{C_p(n)} = \frac{S_p(n)}{p}$
 - **Efficiency** 1 means ideal speedup `S_p = p`.
 - Use the **best** sequential algorithm in the numerator, not the parallel code run on one core. Difficulties: the best algorithm may be unknown, the asymptotically optimal one may be slower in practice, or too complex to implement.
 
